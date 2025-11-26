@@ -60,7 +60,7 @@ const getIconForSubheader = (title) => {
 
 const industryDocuments = [
     {
-        id: 'industry-doc-1',
+        id: 'education',
         pageTitle: 'Education',
         title: 'Transforming Education with Secure Identity Solutions',
         description: 'Education is rapidly evolving in the digital age, and secure access to learning resources is essential to enhancing the learning experience for students, faculty, and administrators. At RAAH Technologies, we empower educational institutions with cutting-edge identity solutions that ensure secure, streamlined access for all stakeholders.',
@@ -200,7 +200,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-2',
+        id: 'energy-and-utilities',
         pageTitle: 'Energy and Utilities',
         title: 'Securing the Energy and Utilities Sector with Tailored Identity Solutions',
         description:
@@ -292,7 +292,7 @@ const industryDocuments = [
         ),
     },
     {
-        id: 'industry-doc-3',
+        id: 'financial-services',
         pageTitle: 'Financial Services',
         title: 'Securing Financial Services with Cutting-Edge Identity Solutions',
         description:
@@ -391,7 +391,7 @@ const industryDocuments = [
         ),
     },
     {
-        id: 'industry-doc-4',
+        id: 'gaming',
         pageTitle: 'Gaming',
         title: 'Securing the Gaming Industry with Innovative Identity Solutions',
         description:
@@ -490,7 +490,7 @@ const industryDocuments = [
         ),
     },
     {
-        id: 'industry-doc-5',
+        id: 'government-and-public-sector',
         pageTitle: 'Government and Public Sector',
         title: 'Enhancing Security for Government and Public Sector with Identity Solutions',
         description: 'The government and public sector face unique challenges when it comes to secure access and identity management. At RAAH Technologies, we offer identity solutions tailored to meet the specific needs of government entities, ensuring security, compliance, and efficient service delivery to the public.',
@@ -588,7 +588,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-6',
+        id: 'healthcare-and-insurance',
         pageTitle: 'Healthcare and Insurance',
         title: 'Protecting Healthcare and Insurance with Advanced Identity Solutions',
         description:
@@ -684,7 +684,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-7',
+        id: 'legal-and-professional-services',
         pageTitle: 'Legal and Professional Services',
         title: 'Protecting Legal and Professional Services with Secure Identity Solutions',
         description:
@@ -777,7 +777,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-8',
+        id: 'manufacturing-and-supply-chain',
         pageTitle: 'Manufacturing & Supply Chain',
         title: 'Enhancing Security in Manufacturing & Supply Chain with Identity Solutions',
         description:
@@ -870,7 +870,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-9',
+        id: 'media-and-entertainment',
         pageTitle: 'Media and Entertainment',
         title: 'Securing Media and Entertainment with Identity Solutions',
         description:
@@ -963,7 +963,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-10',
+        id: 'retail-and-e-commerce',
         pageTitle: 'Retail and E-Commerce',
         title: 'Enhancing Retail and E-Commerce with Secure Identity Solutions',
         description:
@@ -1059,7 +1059,7 @@ const industryDocuments = [
         )
     },
     {
-        id: 'industry-doc-11',
+        id: 'technology-and-telecommunications',
         pageTitle: 'Technology and Telecommunications',
         title: 'Securing Technology and Telecommunications with Identity Solutions',
         description:

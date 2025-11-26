@@ -15,7 +15,7 @@ import {
 
 const useCaseDocuments = [
     {
-        id: 'usecase-doc-1',
+        id: 'sso-for-employees',
         title: 'Single Sign-On (SSO) for Employees',
         description: 'Single Sign-On (SSO) enables employees to use a single set of credentials to access multiple applications, improving user experience and reducing IT overhead.It minimizes the need for remembering multiple passwords, leading to fewer password- related issues and increasing productivity.',
         icon: <IoFingerPrint />,
@@ -95,7 +95,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-2',
+        id: 'mfa-for-enhanced-security',
         title: 'Multi-factor Authentication (MFA) for Enhanced Security',
         description: 'Multi-Factor Authentication (MFA) is a security mechanism that requires users to provide two or more verification factors to gain access to an application, account, or other resource. By combining multiple authentication methods, MFA significantly improves security, making it much harder for attackers to gain unauthorized access.',
         icon: <IoShieldCheckmark />,
@@ -184,7 +184,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-3',
+        id: 'role-based-access-control',
         title: 'Role-Based Access Control (RBAC)',
         description: 'Role-Based Access Control (RBAC) defines roles and associated permissions, enabling organizations to manage access more efficiently. With RBAC, users are granted access based on their job roles, helping enforce consistent security and compliance policies.',
         icon: <IoPersonCircle />,
@@ -265,7 +265,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-4',
+        id: 'device-endpoint-identity-management',
         title: 'Device and Endpoint Identity Management',
         description: 'Device and Endpoint Identity Management is crucial for securing identities across the numerous devices used in modern workplaces. It involves managing the identities of devices and ensuring that only authorized devices are allowed to access sensitive systems and data.',
         icon: <IoLaptop />,
@@ -351,7 +351,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-5',
+        id: 'passwordless-authentication-workforce',
         title: 'Passwordless Authentication for Workforce',
         description: 'Passwordless Authentication is a modern security solution that eliminates the need for traditional passwords, offering a more secure and user-friendly authentication experience. By using biometrics, security tokens, or other secure methods, Passwordless Authentication reduces the risk of credential theft and phishing attacks.',
         icon: <IoLockOpen />,
@@ -413,7 +413,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-6',
+        id: 'zero-trust-adaptive-access-controls',
         title: 'Zero Trust Security and Adaptive Access Controls',
         description: "Zero Trust Security is a framework for enhancing security by assuming that no user or device can be trusted by default, regardless of whether they are inside or outside the organization's network. It requires strict verification for every user or device attempting to access resources.",
         icon: <IoLockClosed />,
@@ -476,7 +476,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-7',
+        id: 'employee-onboarding-offboarding',
         title: 'Employee Onboarding and Offboarding',
         description: 'Automate onboarding and offboarding to streamline identity management.',
         icon: <IoSwapHorizontal />,
@@ -553,7 +553,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-8',
+        id: 'access-certification-attestation',
         title: 'Access Certification and Attestation',
         description: 'Access Certification and Attestation is a process of regularly reviewing and validating user access rights to ensure they align with business requirements and security policies. It is a critical component of governance and compliance.',
         icon: <IoDocumentText />,
@@ -627,7 +627,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-9',
+        id: 'access-request-workflow-automation',
         title: 'Access Request and Workflow Automation',
         description: 'Access Request and Workflow Automation streamlines the process of requesting and granting access to applications and data. It replaces manual, error-prone processes with automated workflows, improving efficiency, security, and governance.',
         icon: <IoServer />,
@@ -698,7 +698,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-10',
+        id: 'identity-lifecycle-management',
         title: 'Identity Lifecycle Management',
         description: 'Identity Lifecycle Management (ILM) manages the complete lifecycle of user identities, from initial creation to deactivation. ILM ensures that users have the right access at the right time, while also enforcing security and compliance policies.',
         icon: <IoRefresh />,
@@ -772,7 +772,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-11',
+        id: 'role-mining-optimization',
         title: 'Role Mining and Optimization',
         description: 'Role Mining and Optimization is a process of analyzing user access rights to identify and define optimal roles. It helps organizations simplify access management, enforce security policies, and reduce administrative overhead.',
         icon: <IoSearchCircle />,
@@ -847,7 +847,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-12',
+        id: 'sod-management',
         title: 'Separation of Duties (SoD) Management',
         description: 'Separation of Duties (SoD) Management is a control mechanism to prevent fraud and errors by ensuring that no single person has control over all steps of a critical business process. It is a key component of a robust security and compliance program.',
         icon: <IoHammer />,
@@ -920,7 +920,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-13',
+        id: 'granular-access-controls',
         title: 'Granular Access Controls',
         description: 'Granular Access Controls provide fine-grained control over user access to applications and data. They allow organizations to define very specific permissions, ensuring that users have access only to what they need to perform their jobs.',
         icon: <IoCube />,
@@ -994,7 +994,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-14',
+        id: 'user-entitlement-management',
         title: 'User Entitlement Management',
         description: 'User Entitlement Management is a process of defining, managing, and governing user access to applications and data. It ensures that users have the right access at the right time, while also enforcing security and compliance policies.',
         icon: <IoIdCard />,
@@ -1068,7 +1068,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-15',
+        id: 'audit-compliance',
         title: 'Audit Compliance',
         description: 'Audit Compliance is the process of ensuring that an organization\'s identity and access management policies and controls align with regulatory requirements and industry standards. It involves providing evidence that access is being managed securely and appropriately.',
         icon: <IoLibrary />,
@@ -1144,7 +1144,7 @@ const useCaseDocuments = [
     },
     // Start of Consumer (B2C, B2B/B2B2C) IAM
     {
-        id: 'usecase-doc-16',
+        id: 'user-registration-self-service-portals',
         title: 'User Registration and Self-Service Portals',
         description: 'Enable users to register and manage their own accounts.',
         icon: <IoPersonAdd />,
@@ -1218,7 +1218,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-17',
+        id: 'social-federated-login-customers',
         title: 'Social and Federated Login for Customers',
         description: 'Social and Federated Login allows customers to use their social media or other existing credentials to log in to your applications. This improves the user experience by simplifying the login process and reduces the need for users to create and remember new passwords.',
         icon: <IoShareSocial />,
@@ -1292,7 +1292,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-18',
+        id: 'customer-profile-consent-management',
         title: 'Customer Profile and Consent Management',
         description: 'Customer Profile and Consent Management is a process of managing customer data and consent preferences. It ensures that organizations collect and use customer data in a compliant and transparent manner, building trust with their customers.',
         icon: <IoSettings />,
@@ -1365,7 +1365,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-19',
+        id: 'api-security-access-control',
         title: 'API Security and Access Control',
         description: 'API Security and Access Control is a process of securing APIs and managing access to them. It ensures that only authorized applications and users can access your APIs, protecting sensitive data and systems.',
         icon: <IoCodeSlash />,
@@ -1439,7 +1439,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-20',
+        id: 'seamless-customer-experience-channels',
         title: 'Seamless Customer Experience across Channels',
         description: 'Providing a seamless customer experience across channels is a key component of modern identity management. It ensures that customers can access your services from any device or platform, while maintaining a consistent and secure experience.',
         icon: <IoResize />,
@@ -1513,7 +1513,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-21',
+        id: 'real-time-identity-threat-detection-customers',
         title: 'Real-Time Identity Threat Detection for Customers',
         description: 'Real-Time Identity Threat Detection is a process of monitoring user behavior and identifying potential threats in real-time. It helps organizations protect their customers from account takeover attacks, fraud, and other cyber threats.',
         icon: <IoWarning />,
@@ -1585,7 +1585,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-22',
+        id: 'progressive-profiling',
         title: 'Progressive Profiling',
         description: 'Progressive Profiling is a method of gradually collecting user information over time, rather than asking for it all at once during registration. It improves the user experience, increases conversion rates, and helps organizations build a more complete view of their customers.',
         icon: <IoBarChart />,
@@ -1660,7 +1660,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-23',
+        id: 'customer-role-entitlement-management',
         title: 'Customer Role and Entitlement Management',
         description: 'Customer Role and Entitlement Management is a process of defining, managing, and governing customer access to applications and data. It ensures that customers have the right access at the right time, while also enforcing security and compliance policies.',
         icon: <IoPeople />,
@@ -1734,7 +1734,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-24',
+        id: 'cross-organization-collaboration',
         title: 'Cross-Organization Collaboration',
         description: 'Cross-Organization Collaboration is a process of enabling secure collaboration between different organizations. It ensures that partners, vendors, and suppliers can access the necessary systems and data, while maintaining security and compliance.',
         icon: <IoGitNetwork />,
@@ -1807,7 +1807,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-25',
+        id: 'account-recovery-identity-assurance',
         title: 'Account Recovery and Identity Assurance',
         description: 'Account Recovery and Identity Assurance is a process of securely helping users recover their accounts while maintaining a high level of identity assurance. It prevents unauthorized account takeovers and fraud, building trust with your customers.',
         icon: <IoShieldHalf />,
@@ -1882,7 +1882,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-26',
+        id: 'partner-federation',
         title: 'Partner Federation',
         description: 'Partner Federation is a process of federating identities across partner organizations. It allows partners to use their own credentials to access your systems, while maintaining security and compliance.',
         icon: <IoGitPullRequest />,
@@ -1955,7 +1955,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-27',
+        id: 'delegated-administration',
         title: 'Delegated Administration',
         description: 'Delegated Administration is a process of delegating administrative tasks to specific users or roles. It helps organizations improve efficiency, reduce administrative overhead, and enhance security by distributing administrative tasks.',
         icon: <IoBuild />,
@@ -2028,7 +2028,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-28',
+        id: 'contextual-risk-based-access',
         title: 'Contextual and Risk-Based Access',
         description: 'Contextual and Risk-Based Access is a security mechanism that grants access to applications and data based on real-time context and risk factors. It ensures that access is granted only when conditions are met, protecting against unauthorized access and data breaches.',
         icon: <IoEye />,
@@ -2102,7 +2102,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-29',
+        id: 'partner-consumer-identity-audit-compliance',
         title: 'Partner and Consumer Identity Audit Compliance',
         description: 'Partner and Consumer Identity Audit Compliance is a process of ensuring that an organization\'s identity and access management policies and controls for partners and consumers align with regulatory requirements and industry standards. It involves providing evidence that access is being managed securely and appropriately.',
         icon: <IoDocumentAttach />,
@@ -2177,7 +2177,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-30',
+        id: 'supplier-vendor-identity-management',
         title: 'Supplier and Vendor Identity Management',
         description: 'Supplier and Vendor Identity Management is a process of managing the identities of suppliers and vendors. It ensures that suppliers and vendors can access the necessary systems and data, while maintaining security and compliance.',
         icon: <IoIdCardOutline />,
@@ -2251,7 +2251,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-31',
+        id: 'adaptive-authentication',
         title: 'Adaptive Authentication',
         description: 'Adaptive Authentication is a security mechanism that adjusts the authentication process based on real-time context and risk factors. It ensures that users are only prompted for additional verification when necessary, balancing security with user experience.',
         icon: <IoSpeedometer />,
@@ -2325,7 +2325,7 @@ const useCaseDocuments = [
     },
     // Start of Privileged Access Management
     {
-        id: 'usecase-doc-32',
+        id: 'admin-high-risk-user-monitoring',
         title: 'Administrator and High-Risk User Monitoring',
         description: 'Administrator and High-Risk User Monitoring is a process of monitoring privileged accounts for suspicious activity. It helps organizations protect their critical systems and data from unauthorized access, fraud, and other cyber threats.',
         icon: <IoEye />,
@@ -2398,7 +2398,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-33',
+        id: 'jit-privileged-access',
         title: 'Just-In-Time (JIT) Privileged Access',
         description: 'Just-In-Time (JIT) Privileged Access is a security mechanism that grants temporary access to privileged resources on an as-needed basis. It helps organizations reduce the attack surface, improve security, and ensure compliance.',
         icon: <IoTime />,
@@ -2471,7 +2471,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-34',
+        id: 'privileged-account-discovery-lifecycle',
         title: 'Privileged Account Discovery and Lifecycle Management',
         description: 'Privileged Account Discovery and Lifecycle Management is a process of identifying and managing privileged accounts across your organization. It ensures that privileged accounts are managed securely and in compliance with regulatory requirements.',
         icon: <IoSearch />,
@@ -2544,7 +2544,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-35',
+        id: 'session-monitoring-audit',
         title: 'Session Monitoring and Audit',
         description: 'Session Monitoring and Audit is a process of monitoring and recording privileged sessions to ensure compliance and prevent unauthorized activity. It provides a clear audit trail of all privileged access, simplifying compliance and auditing.',
         icon: <IoVideocam />,
@@ -2617,7 +2617,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-36',
+        id: 'privileged-task-automation',
         title: 'Privileged Task Automation',
         description: 'Privileged Task Automation is a process of automating tasks performed by privileged users. It helps organizations improve efficiency, reduce administrative overhead, and enhance security by reducing the need for manual, privileged access.',
         icon: <IoSync />,
@@ -2690,7 +2690,7 @@ const useCaseDocuments = [
         )
     },
     {
-        id: 'usecase-doc-37',
+        id: 'privileged-access-governance',
         title: 'Privileged Access Governance',
         description: 'Privileged Access Governance is a process of defining, managing, and governing privileged access. It ensures that privileged access is managed securely and in compliance with regulatory requirements and industry standards.',
         icon: <IoSchool />,
