@@ -1,0 +1,166 @@
+.Header {
+    width: calc(100% - .5em + 2px);
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    height: 10em;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.Header.with-border {
+    height: 7em;
+    /* border-bottom: .5em solid var(--base-text-color); */
+}
+
+.Header.with-border .RAAHLogo {
+    margin-top: 2em;
+    height: 4em;
+}
+
+.Header.with-border .PageCorner {
+    transform: scale(.8);
+}
+
+@media (max-width:600px) {
+    .Header {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:850px) {
+    .PageCorner {
+        display: none;
+    }
+}
+
+@media (min-width:1200px) {
+    .Header {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1800px) {
+    .Header {
+        font-size: 28px;
+    }
+}
+
+.RAAHLogo {
+    margin-top: 2.5em;
+    margin-left: 5em;
+    height: 5em;
+    transition: all .5s ease-in-out;
+    /* filter: var(--icon-filter); */
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* Default (light mode) */
+.RAAHLogo--light {
+    display: block;
+}
+
+.RAAHLogo--dark {
+    display: none;
+}
+
+/* Dark mode when <html data-theme="dark"> */
+[data-theme='dark'] .RAAHLogo--light {
+    display: none;
+}
+
+[data-theme='dark'] .RAAHLogo--dark {
+    display: block;
+}
+
+.RAAHLogo:hover {
+    transform: scale(1.2);
+}
+
+.PageCorner {
+    position: relative;
+    margin-top: 1em;
+    margin-right: 1em;
+    transition: all .5s ease-in-out;
+}
+
+.PageCornerDot {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--base-text-color);
+}
+
+.Dot1 {
+    right: 0;
+    top: 0;
+    width: .8em;
+    height: .8em;
+}
+
+.Dot2 {
+    right: 1.5em;
+    top: .1em;
+    width: .6em;
+    height: .6em;
+}
+
+.Dot3 {
+    right: .1em;
+    top: 1.5em;
+    width: .6em;
+    height: .6em;
+}
+
+.Dot4 {
+    right: 3em;
+    top: .2em;
+    width: .4em;
+    height: .4em;
+}
+
+.Dot5 {
+    right: 1.5em;
+    top: 1.5em;
+    width: .4em;
+    height: .4em;
+}
+
+.Dot6 {
+    right: .2em;
+    top: 3em;
+    width: .4em;
+    height: .4em;
+}
+
+.Dot7 {
+    right: 4.5em;
+    top: .3em;
+    width: .2em;
+    height: .2em;
+}
+
+.Dot8 {
+    right: 1.6em;
+    top: 3.1em;
+    width: .2em;
+    height: .2em;
+}
+
+.Dot9 {
+    right: 3.1em;
+    top: 1.6em;
+    width: .2em;
+    height: .2em;
+}
+
+.Dot10 {
+    right: .3em;
+    top: 4.5em;
+    width: .2em;
+    height: .2em;
+}

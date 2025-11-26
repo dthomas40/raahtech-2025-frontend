@@ -1,0 +1,104 @@
+.AboutIdentityServicesContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.AboutIdentityServicesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 60px;
+}
+
+.AboutIdentityServicesCard {
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.AboutIdentityServicesImage {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    filter: var(--icon-filter);
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.AboutIdentityServicesCard:hover .AboutIdentityServicesImage {
+    transform: rotateY(360deg);
+}
+
+.AboutIdentityServicesContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 350px;
+}
+
+.AboutIdentityServicesTitle {
+    color: var(--accent-color);
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    justify-self: flex-start;
+}
+
+.AboutIdentityServicesDescription {
+    justify-self: flex-start;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .AboutIdentityServicesContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+
+    .AboutIdentityServicesCard {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .AboutIdentityServicesContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+
+    .AboutIdentityServicesCard {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutIdentityServicesContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+
+    .AboutIdentityServicesCard {
+        flex: 1 1 calc(33.33% - 40px);
+        max-width: calc(33.33% - 40px);
+    }
+}

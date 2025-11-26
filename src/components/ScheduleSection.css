@@ -1,0 +1,106 @@
+.ScheduleSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 3em;
+}
+
+.ScheduleSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+.ScheduleSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.ScheduleSectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.ScheduleSectionCTA img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.ScheduleSectionCTA::before,
+.ScheduleSectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.ScheduleSectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.ScheduleSectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.ScheduleSectionCTA:hover::before,
+.ScheduleSectionCTA:hover::after {
+    height: 510px;
+    width: 510px;
+}
+
+.ScheduleSectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.ScheduleSectionCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:600px) {
+    .ScheduleSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .ScheduleSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ScheduleSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

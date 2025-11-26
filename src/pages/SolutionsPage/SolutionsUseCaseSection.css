@@ -1,0 +1,253 @@
+.SolutionsUseCaseSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.SolutionsUseCaseSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.SolutionsUseCaseSectionIntroTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.SolutionsUseCaseSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: center;
+}
+
+.SolutionUseCaseSectionButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+    margin-top: 1em;
+}
+
+.SolutionUseCaseSectionButton {
+    --color: var(--bg-color);
+    padding: 0.5em 2em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.SolutionUseCaseSectionButton img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.SolutionUseCaseSectionButton::before,
+.SolutionUseCaseSectionButton::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.SolutionUseCaseSectionButton::before {
+    top: -1em;
+    left: -1em;
+}
+
+.SolutionUseCaseSectionButton::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.SolutionUseCaseSectionButton:hover::before,
+.SolutionUseCaseSectionButton:hover::after {
+    height: 610px;
+    width: 610px;
+}
+
+.SolutionUseCaseSectionButton:hover {
+    color: var(--base-text-color);
+}
+
+.SolutionUseCaseSectionButton:active {
+    filter: brightness(.8);
+}
+
+.SolutionsUseCaseSectionGraphicsContainer {
+    border: 2px solid var(--base-text-color);
+    padding: 0.5em;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+    background-color: var(--bg-color);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.SolutionsUseCaseSectionGraphicWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0.5em;
+}
+
+.SolutionsUseCaseSectionGraphicWrapper:hover {
+    cursor: pointer;
+    border: 1px solid var(--accent-color);
+    background-image: linear-gradient(to bottom right, #FFDECC, #FFEEE5);
+    padding: calc(0.5em - 1px);
+}
+
+.SolutionsUseCaseSectionGraphicWrapper:hover .SolutionsUseCaseSectionGraphicTitle {
+    text-decoration: underline;
+}
+
+.SolutionsUseCaseSectionGraphicText {
+    text-align: left;
+}
+
+.SolutionsUseCaseSectionGraphicTitle {
+    display: flex;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0 0 0.25em 0;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.SolutionsUseCaseSectionGraphicDescription {
+    font-size: 1em;
+    color: black;
+    margin: 0;
+}
+
+.SolutionsUseCaseSectionGraphic {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    object-fit: scale-down;
+    padding: 10px;
+    margin-left: 1.5em;
+}
+
+.SolutionsUseCaseSectionGraphicsContainer::-webkit-scrollbar {
+    width: 0.75em;
+}
+
+.SolutionsUseCaseSectionGraphicsContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.SolutionsUseCaseSectionGraphicsContainer::-webkit-scrollbar-thumb {
+    background-color: var(--base-text-color);
+    border-radius: 10px;
+    border: 3px solid var(--bg-color);
+}
+
+@media (max-width:1200px) {
+    .SolutionsUseCaseSectionContainer {
+        font-size: 20px;
+        row-gap: 1em;
+    }
+
+    .SolutionUseCaseSectionButtons {
+        flex-direction: column;
+        row-gap: 0.5em;
+    }
+
+    .SolutionsUseCaseSectionGraphicsContainer {
+        width: 90vw;
+        row-gap: 0.5em;
+        padding: 0.5em;
+    }
+
+    .SolutionsUseCaseSectionGraphicWrapper {
+        align-items: flex-start;
+        padding: 0.5em;
+    }
+
+    .SolutionsUseCaseSectionGraphic {
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media (max-width:600px) {
+    .SolutionsUseCaseSectionContainer {
+        font-size: 12px;
+        row-gap: 1em;
+    }
+
+    .SolutionUseCaseSectionButtons {
+        flex-direction: column;
+        row-gap: 0.5em;
+    }
+
+    .SolutionsUseCaseSectionGraphicsContainer {
+        width: 90vw;
+        row-gap: 0.5em;
+        padding: 0.5em;
+    }
+
+    .SolutionsUseCaseSectionGraphicWrapper {
+        align-items: flex-start;
+        padding: 0.5em;
+    }
+
+    .SolutionsUseCaseSectionGraphic {
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media (min-width:1200px) {
+    .SolutionsUseCaseSectionContainer {
+        font-size: 20px;
+        row-gap: 1em;
+    }
+
+    .SolutionUseCaseSectionButtons {
+        row-gap: 0.5em;
+    }
+}
+
+@media (min-width:1800px) {
+    .SolutionsUseCaseSectionContainer {
+        font-size: 28px;
+        row-gap: 1em;
+    }
+}

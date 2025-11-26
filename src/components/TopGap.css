@@ -1,0 +1,23 @@
+.TopGap {
+    height: 10em;
+    background-color: var(--bg-color);
+}
+
+@media (max-width:600px) {
+    .TopGap {
+        height: 10em;
+        font-size: 12px;
+    }
+}
+
+@media (min-width:1200px) {
+    .TopGap {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1800px) {
+    .TopGap {
+        font-size: 28px;
+    }
+}

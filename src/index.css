@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'Poppins', Arial, sans-serif;
+  --bg-color: #FFEEE5;
+  --dark-mode-toggle-border: #0d0042;
+  --LinkedIn-Icon-bg-color: #FFEEE5;
+  --nav-color: #ffffff;
+  --nav-text-color: #0D0042;
+  --nav-bg-color: #ffffff;
+  --nav-border-color: #000000;
+  --hamburger-menu-color: #0D0042;
+  --base-text-color: #0D0042;
+  --accent-color: #FD5F0D;
+  --tag-color: #0D0042;
+  --divider-color: #858585;
+  --footer-input-color: #0D0042;
+  --footer-gradient-1: #FFEEE5;
+  --footer-gradient-2: #FFDECC;
+  --footer-border-color: #000000;
+  --footer-nav-text-color: #0D0042;
+  --footer-input-placeholder-color: #ffffff;
+  --icon-filter: invert(0);
+  --LinkedIn-icon-filter: invert(0);
+  --about-steps-content-color: #ffffff;
+  --about-leadership-card-p-color: #ffffff;
+  --home-hero-brick-underline: #0D0042;
+  --home-use-case-table-text-color: #0D0042;
+  --home-use-case-table-bg-color: #ffffff;
+  --home-clients-section-grid-image-bg-color: #ffffff;
+  --home-hero-detailed-view: #0D0042;
+  --services-hero-section-contact-image-wrapper-after-box: #0D0042;
+  --about-leadership-section-leader-content-bg-color: #0D0042;
+  --about-step-tab-wrapper-bg-color: #0D0042;
+  --solutions-industry-card-description-hover: #000000;
+  --whitePaper-download-button: #0D0042;
+  --explore-whitepapers-email-modal-text-color: #0D0042;
+  --explore-whitepapers-email-modal-border-color: #0d004200;
+}
+
+[data-theme='dark'] {
+  --dark-mode-toggle-border: #ffde59;
+  --tag-color: #FFEEE5;
+  --base-text-color: #ffffff;
+  --nav-color: #0D0042;
+  --nav-text-color: #ffffff;
+  --nav-bg-color: #0D0042;
+  --nav-border-color: #FD5F0D;
+  --hamburger-menu-color: #FD5F0D;
+  --accent-color: #FD5F0D;
+  --bg-color: #0D0042;
+  --LinkedIn-Icon-bg-color: #FFEEE5;
+  --divider-color: #e4e4e4;
+  --footer-input-color: #FFEEE5;
+  --footer-gradient-1: #2b1a6e;
+  --footer-gradient-2: #0D0042;
+  --footer-border-color: #000000;
+  --footer-nav-text-color: #FFEEE5;
+  --footer-input-placeholder-color: #0D0042;
+  --icon-filter: invert(1);
+  --LinkedIn-icon-filter: invert(1);
+  --about-steps-content-color: #0D0042;
+  --about-leadership-card-p-color: #0D0042;
+  --home-hero-brick-underline: #0D0042;
+  --home-use-case-table-text-color: #FFEEE5;
+  --home-use-case-table-bg-color: #321e8540;
+  /* --home-clients-section-grid-image-bg-color: #cec2ff9e; */
+  --home-clients-section-grid-image-bg-color: #ffffff;
+  --home-hero-detailed-view: #FFEEE5;
+  --services-hero-section-contact-image-wrapper-after-box: #FFEEE5;
+  --about-leadership-section-leader-content-bg-color: #FFEEE5;
+  --about-step-tab-wrapper-bg-color: #FFEEE5;
+  --solutions-industry-card-description-hover: #000000;
+  --whitePaper-download-button: #0D0042;
+  --explore-whitepapers-email-modal-text-color: #FFEEE5;
+  --explore-whitepapers-email-modal-border-color: #FD5F0D;
+}
+
+body {
+  margin: 0;
+}
+
+@keyframes ReusableFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ReusableSlideRight {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}

@@ -1,0 +1,281 @@
+.HomeServicesSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+@media (max-width:600px) {
+    .HomeServicesSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+
+    .HomeServicesSectionContent {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    .HomeServicesSectionContentDetailedView {
+        row-gap: 15px !important;
+    }
+
+    .HomeServicesSectionContentGraphics {
+        width: 60vw !important;
+        height: 60vw !important;
+    }
+
+    .HomeServicesSectionContentDetailedView {
+        width: 80vw !important;
+    }
+}
+
+@media (min-width:1200px) {
+    .HomeServicesSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .HomeServicesSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}
+
+.HomeServicesSectionIntro {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: 70vw; // keep the same as the other section intros which is 80vw*/
+    width: 80vw;
+}
+
+.HomeServicesSectionIntroTitle {
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.HomeServicesSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.HomeServicesSectionContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* width: 70vw; //keep the same as graphics section which is 80vw*/
+    width: 80vw;
+    /* max-width: 1000px; //remove because text size is change responsively */
+}
+
+.HomeServicesSectionContentGraphics {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* justify-content: space-between; //switch to grid layout */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    row-gap: 20px;
+    column-gap: 20px;
+
+    width: 40vw;
+    max-width: 700px;
+    height: 40vw;
+    max-height: 700px;
+    place-items: end;
+}
+
+.HomeServicesSectionContentImageWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.HomeServicesSectionContentHoverTitle {
+    position: absolute;
+    top: -1.5em;
+    text-align: center;
+    background-color: var(--base-text-color);
+    padding: 0.25em 0.25em;
+    border-radius: 5px;
+    color: var(--bg-color);
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.HomeServicesSectionContentImageWrapper:hover .HomeServicesSectionContentHoverTitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.HomeServicesSectionContentImage {
+    /* width: 20vw; //change to percentage of container*/
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-inline: auto;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* opacity: .8; */
+}
+
+.HomeServicesSectionContentImage:hover {
+    /* animation: HomeServicesPulse 1s ease-in-out infinite; */
+    width: 100%;
+}
+
+.HomeServicesSectionContentImage.selected:hover {
+    animation: none;
+}
+
+@keyframes HomeServicesPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.9);
+        opacity: .9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* .HomeServicesSectionContentImageWrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: var(--tag-color);
+    z-index: 0;
+} */
+
+.HomeServicesSectionContentImage.selected {
+    width: 100%;
+    /*increase size on selection*/
+
+    opacity: 1;
+}
+
+.HomeServicesSectionContentDetailedView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    width: 40vw;
+    /* max-width: 450px; */
+}
+
+.HomeServicesSectionContentDetailedView.ReusableFadeUp {
+    animation: ReusableFadeUp 0.6s ease-out;
+}
+
+.HomeServicesSectionContentDetailedViewTitle {
+    margin: 0;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.HomeServicesSectionContentDetailedViewDescription {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--base-text-color);
+    font-size: 1em;
+    margin-inline: 3em;
+}
+
+.HomeServicesSectionContentDetailedViewCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.HomeServicesSectionContentDetailedViewCTA img {
+    padding-left: 5px;
+    height: 1em;
+}
+
+.HomeServicesSectionContentDetailedViewCTA::before,
+.HomeServicesSectionContentDetailedViewCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.HomeServicesSectionContentDetailedViewCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.HomeServicesSectionContentDetailedViewCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.HomeServicesSectionContentDetailedViewCTA:hover::before,
+.HomeServicesSectionContentDetailedViewCTA:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.HomeServicesSectionContentDetailedViewCTA:hover {
+    color: var(--base-text-color);
+}
+
+.HomeServicesSectionContentDetailedViewCTA:active {
+    filter: brightness(.8);
+}

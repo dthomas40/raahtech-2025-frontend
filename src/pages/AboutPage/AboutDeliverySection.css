@@ -1,0 +1,53 @@
+.AboutDeliverySectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 3em;
+}
+
+.AboutDeliverySectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+.AboutDeliverySectionIntroTitle {
+    text-align: right;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.AboutDeliverySectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+@media (max-width:600px) {
+    .AboutDeliverySectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutDeliverySectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutDeliverySectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

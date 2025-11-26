@@ -1,0 +1,81 @@
+.ExploreIntroSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.ExploreIntroSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+    row-gap: 2em;
+}
+
+.ExploreIntroSectionIntroTitleAccent {
+    box-sizing: border-box;
+    background-color: var(--tag-color);
+    width: 100%;
+    max-width: 30vw;
+    min-width: 300px;
+    height: max-content;
+    align-self: flex-start;
+    border-width: 2px 2px 2px 0px;
+    border-style: solid;
+    border-color: var(--accent-color);
+    transform: translateX(-100%);
+    animation: ExploreTitleTagSlide 1s forwards;
+}
+
+@keyframes ExploreTitleTagSlide {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.ExploreIntroSectionIntroTitle {
+    /* text-align: right; */
+    padding-top: 1em;
+    padding-right: 2em;
+    padding-bottom: .5em;
+    font-size: 2em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.ExploreIntroSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    padding: 0px 5vw;
+    text-align: left;
+}
+
+
+@media (max-width:600px) {
+    .ExploreIntroSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .ExploreIntroSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ExploreIntroSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

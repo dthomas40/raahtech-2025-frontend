@@ -1,0 +1,190 @@
+.ContactFormSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.ContactFormSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: ContactFormSectionIntroFadeUp 1s forwards;
+}
+
+@keyframes ContactFormSectionIntroFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ContactFormSectionIntroTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.ContactFormSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: center;
+}
+
+.ContactFormSectionFormContainer {
+    width: 100%;
+    max-width: 70vw;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: ContactFormSectionFormContainerFadeUp 1s forwards;
+}
+
+@keyframes ContactFormSectionFormContainerFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ContactFormRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.ContactFormRow label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.ContactFormRow input,
+.ContactFormRow select,
+.ContactFormRow textarea {
+    padding: 0.7em;
+    margin-top: 0.5em;
+    border: 2px solid var(--base-text-color);
+    font-size: 1em;
+    color: var(--base-text-color);
+    font-family: inherit;
+}
+
+.ContactFormRow input::placeholder,
+.ContactFormRow textarea::placeholder,
+.ContactFormRow select:invalid {
+    font-style: italic;
+}
+
+.ContactFormRow select {
+    appearance: none;
+    background-image: url('../../assets/ContactFormSectionGraphic.png');
+    background-repeat: no-repeat;
+    background-position: right 0.7em center;
+    background-size: 1em;
+}
+
+.ContactFormRow textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.ContactFormFullWidth {
+    width: 100%;
+}
+
+.ContactFormSectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.ContactFormSectionCTA img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.ContactFormSectionCTA::before,
+.ContactFormSectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.ContactFormSectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.ContactFormSectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.ContactFormSectionCTA:hover::before,
+.ContactFormSectionCTA:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.ContactFormSectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.ContactFormSectionCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:600px) {
+    .ContactFormSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .ContactFormSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ContactFormSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

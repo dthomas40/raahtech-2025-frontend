@@ -1,0 +1,337 @@
+.HomeServicesSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+@media (max-width:600px) {
+    .HomeServicesSectionContainer {
+        font-size: 12px;
+        row-gap: 0px;
+    }
+
+    .HomeServicesSectionContent {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    .HomeServicesSectionContentDetailedView {
+        row-gap: 15px !important;
+    }
+
+    .HomeServicesSectionContentGraphics {
+        width: 60vw !important;
+        height: 60vw !important;
+    }
+
+    .HomeServicesSectionContentDetailedView {
+        width: 80vw !important;
+    }
+
+    .HomeServicesSectionIntro {
+        align-items: center !important;
+    }
+
+    .HomeServicesSectionIntroTitle,
+    .HomeServicesSectionIntroDescription {
+        text-align: center !important;
+    }
+}
+
+@media (min-width:1200px) {
+    .HomeServicesSectionContainer {
+        font-size: 20px;
+        row-gap: 0px;
+    }
+}
+
+@media (min-width:1800px) {
+    .HomeServicesSectionContainer {
+        font-size: 28px;
+        row-gap: 0px;
+    }
+}
+
+.HomeServicesSectionIntro {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: 70vw; // keep the same as the other section intros which is 80vw*/
+    width: 80vw;
+}
+
+.HomeServicesSectionIntroTitle {
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.HomeServicesSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.HomeServicesSectionContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* width: 70vw; //keep the same as graphics section which is 80vw*/
+    width: 80vw;
+    /* max-width: 1000px; //remove because text size is change responsively */
+}
+
+.HomeServicesSectionContentGraphics {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* justify-content: space-between; //switch to grid layout */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    row-gap: 20px;
+    column-gap: 20px;
+
+    width: 40vw;
+    max-width: 700px;
+    height: 40vw;
+    max-height: 700px;
+    place-items: end;
+}
+
+.HomeServicesSectionContentImageWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    --corner-len: 18px;
+    --corner-thick: 3px;
+    --corner-color: var(--base-text-color);
+
+    /* animated sizes (0 -> corner-len) */
+    --h: 0;
+    --v: 0;
+
+    transition: width .5s ease-in-out;
+    /* smooth grow if you later change width on select */
+}
+
+.HomeServicesSectionContentImageWrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+
+    /* 8 gradient layers: 2 per corner (horizontal + vertical) */
+    background:
+        /* top-left */
+        linear-gradient(var(--corner-color), var(--corner-color)) top left / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) top left / var(--corner-thick) var(--v) no-repeat,
+
+        /* top-right */
+        linear-gradient(var(--corner-color), var(--corner-color)) top right / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) top right / var(--corner-thick) var(--v) no-repeat,
+
+        /* bottom-left */
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom left / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom left / var(--corner-thick) var(--v) no-repeat,
+
+        /* bottom-right */
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom right / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom right / var(--corner-thick) var(--v) no-repeat;
+
+    transition:
+        opacity .28s ease,
+        background-size .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+.HomeServicesSectionContentImageWrapper.selected {
+    /* If you want a slight emphasis when selected, uncomment next two lines:
+     width: 100%;
+     max-width: 350px;
+  */
+    --h: var(--corner-len);
+    --v: var(--corner-len);
+}
+
+.HomeServicesSectionContentImageWrapper.selected::after {
+    opacity: 1;
+}
+
+.HomeServicesSectionContentImageWrapper:not(.selected):hover::after {
+    opacity: 0;
+}
+
+/* Make the selected image look polished like in UseCase */
+.HomeServicesSectionContentImage.selected {
+    border-radius: 1em;
+    /* keep your existing width increase from your stylesheet */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .HomeServicesSectionContentImageWrapper,
+    .HomeServicesSectionContentImageWrapper::after {
+        transition: none;
+    }
+}
+
+.HomeServicesSectionContentHoverTitle {
+    display: none !important;
+}
+
+.HomeServicesSectionContentImageWrapper:hover .HomeServicesSectionContentHoverTitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.HomeServicesSectionContentImage {
+    /* width: 20vw; //change to percentage of container*/
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-inline: auto;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* opacity: .8; */
+}
+
+.HomeServicesSectionContentImage:hover {
+    /* animation: HomeServicesPulse 1s ease-in-out infinite; */
+    width: 100%;
+}
+
+.HomeServicesSectionContentImage.selected:hover {
+    animation: none;
+}
+
+@keyframes HomeServicesPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.9);
+        opacity: .9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.HomeServicesSectionContentImage.selected {
+    width: 100%;
+    opacity: 1;
+}
+
+.HomeServicesSectionContentDetailedView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    width: 40vw;
+}
+
+.HomeServicesSectionContentDetailedView.ReusableFadeUp {
+    animation: ReusableFadeUp 0.6s ease-out;
+}
+
+.HomeServicesSectionContentDetailedViewTitle {
+    margin: 0;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.HomeServicesSectionContentDetailedViewDescription {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--base-text-color);
+    font-size: 1em;
+    margin-inline: 3em;
+}
+
+.HomeServicesSectionContentDetailedViewCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.HomeServicesSectionContentDetailedViewCTA img {
+    padding-left: 5px;
+    height: 1em;
+    filter: var(--icon-filter);
+}
+
+.HomeServicesSectionContentDetailedViewCTA::before,
+.HomeServicesSectionContentDetailedViewCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.HomeServicesSectionContentDetailedViewCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.HomeServicesSectionContentDetailedViewCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.HomeServicesSectionContentDetailedViewCTA:hover::before,
+.HomeServicesSectionContentDetailedViewCTA:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.HomeServicesSectionContentDetailedViewCTA:hover {
+    color: var(--base-text-color);
+}
+
+.HomeServicesSectionContentDetailedViewCTA:active {
+    filter: brightness(.8);
+}

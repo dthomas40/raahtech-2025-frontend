@@ -1,0 +1,89 @@
+.SolutionsPlatformSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.SolutionsPlatformSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.SolutionsPlatformSectionIntroTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.SolutionsPlatformSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: center;
+}
+
+.SolutionsPlatformSectionGraphicsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.PlatformSectionGraphic {
+    width: 15vw;
+    height: auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.PlatformSectionGraphic:hover {
+    transform: translateY(-30px);
+    background-image: linear-gradient(to bottom right, #FFDECC, #FFEEE5);
+    border-radius: 15px;
+    box-shadow: 0 0 4px #000000;
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .SolutionsPlatformSectionContainer {
+        font-size: 12px;
+        row-gap: 2em;
+    }
+
+    .SolutionsPlatformSectionGraphicsContainer {
+        justify-content: center;
+        width: 90vw;
+        column-gap: 1em;
+    }
+
+    .PlatformSectionGraphic {
+        width: 25vw;
+        height: auto;
+    }
+}
+
+@media (min-width:1200px) {
+    .SolutionsPlatformSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .SolutionsPlatformSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

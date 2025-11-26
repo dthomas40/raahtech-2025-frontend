@@ -1,0 +1,252 @@
+.NavbarContainer {
+    width: calc(100% - .5em + 2px);
+    position: fixed;
+    z-index: 100;
+    top: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.NavbarScrollSpacer {
+    position: absolute;
+    z-index: -1;
+    height: 10em;
+    margin-top: -10em;
+}
+
+.NavbarContainer::before {
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10em;
+    background-color: var(--bg-color);
+    content: "";
+}
+
+.NavbarContainer.move-up::before {
+    height: 7em;
+}
+
+.NavbarContainer.move-up {
+    top: 1em;
+}
+
+.NavbarContainer.move-up .Navbar {
+    margin-top: 1.5em;
+}
+
+.NavbarContainer.move-up .Navbar a {
+    font-size: .6em;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--nav-border-color);
+    background-color: var(--nav-bg-color);
+    border-radius: 3em;
+    height: 3em;
+    transition: all .5s ease-in-out;
+}
+
+.Navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    border: none;
+    background-color: transparent;
+    color: var(--nav-text-color);
+    font-size: .7em;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+
+    padding-inline: .5em;
+
+    width: 100%;
+    height: 100%;
+}
+
+.Navbar a.NavbarCTA img {
+    margin-inline: .25em;
+    width: .5em;
+    height: auto;
+    filter: var(--icon-filter);
+}
+
+.Navbar a:first-child {
+    padding-left: 2em;
+    border-radius: 3em 0px 0px 3em;
+}
+
+.Navbar a:last-child {
+    padding-right: 2em;
+    border-radius: 0px 3em 3em 0px;
+}
+
+.Navbar a.active {
+    /* background-color: var(--accent-color);
+    color: var(--bg-color); */
+    /* border-radius: 5px; */
+    /* text-decoration: underline 1px solid var(--accent-color); */
+    padding-inline: 2em;
+}
+
+.Navbar a.NavbarCTA {
+    color: var(--accent-color);
+}
+
+.Navbar a.NavbarCTA.active {
+    color: var(--tag-color);
+    background-color: var(--accent-color);
+}
+
+.Navbar a.NavbarCTA:hover {
+    color: var(--tag-color);
+    background-color: var(--accent-color);
+}
+
+.Navbar a:hover {
+    cursor: pointer;
+    background-color: var(--tag-color);
+    color: var(--bg-color);
+    /* border-radius: 5px; */
+    padding-inline: 2em;
+}
+
+.Navbar a.active {
+    background-color: var(--tag-color);
+    color: var(--bg-color);
+}
+
+/* .Navbar:hover {
+    border-radius: 5px;
+} */
+
+.HamburgerMenu {
+    font-size: 1.8em;
+    color: var(--hamburger-menu-color);
+    background-color: white;
+    border: 1px solid var(--base-text-color);
+    border-radius: 50%;
+    padding: 0.3em 0.5em;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.MobileMenuModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: MobileMenuModalAnimation 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes MobileMenuModalAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+.MobileMenuContent {
+    background-color: var(--bg-color);
+    border-radius: 0px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--base-text-color);
+    width: 60vw;
+    height: 50vh;
+
+    animation: MobileMenuContentAnimation 1s ease forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes MobileMenuContentAnimation {
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.MobileMenuContent a {
+
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-top: 2px solid var(--base-text-color);
+    background: none;
+    color: var(--nav-text-color);
+    /* border-bottom: 1px solid black; */
+}
+
+.MobileMenuContent a:first-of-type {
+    border-top: none !important;
+}
+
+.MobileMenuContent .NavbarCTA {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-bottom: none;
+    border: 1px solid var(--base-text-color);
+    background-color: var(--accent-color);
+
+}
+
+.MobileMenuContent .NavbarCTA img {
+    padding-left: 10px;
+    filter: invert(1);
+}
+
+@media (max-width: 850px) {
+    .Navbar {
+        display: none;
+    }
+
+    .NavbarContainer {
+        justify-content: right;
+        top: 2em;
+        font-size: 16px;
+    }
+
+    .HamburgerMenu {
+        background-color: #ffffff00;
+        border: none;
+        margin-right: .5em;
+    }
+
+    .NavbarContainer::before {
+        height: 5em !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .NavbarContainer {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .NavbarContainer {
+        font-size: 28px;
+    }
+}

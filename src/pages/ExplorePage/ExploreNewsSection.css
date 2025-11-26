@@ -1,0 +1,143 @@
+.NewsContainer {
+    background-color: var(--bg-color);
+    width: 100%;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:600px) {
+    .NewsContainer {
+        font-size: 12px;
+
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width:1200px) {
+    .NewsContainer {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1800px) {
+    .NewsContainer {
+        font-size: 28px;
+    }
+}
+
+.NewsBlockContainer {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2em;
+    row-gap: 2em;
+}
+
+.NewsBlock {
+    width: 15em;
+    min-height: 19em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+    border-radius: 0px;
+    padding-block: .5em;
+}
+
+.NewsBlock:hover {
+    cursor: pointer;
+}
+
+.NewsBlock:hover .NewsBlockImage {
+    margin-left: 0px;
+}
+
+.NewsBlock:hover h3,
+.NewsBlock:hover p {
+    text-decoration: underline;
+}
+
+.NewsBlock h3 {
+    color: #484848;
+    font-family: 'Times New Roman', Times, serif;
+    width: 90%;
+    font-size: 1.5em;
+}
+
+.NewsBlockImage {
+    flex: 1;
+    width: 95%;
+    margin-left: calc(-5% - 1em);
+    background-color: #d9d9d9;
+    transition: all .5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.NewsBlock p {
+    color: #484848;
+    /* flex: 1; */
+    width: 90%;
+    text-align: right;
+    font-size: .75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 4em;
+    margin-bottom: 3em; */
+}
+
+.NewsTagContainer {
+    width: 90%;
+    display: flex;
+}
+
+.NewsTag:first-of-type {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.NewsTag {
+    font-size: .75em;
+    margin-inline: .5em;
+    padding: .5em 1em;
+    border-radius: .5em;
+    background-color: black;
+    color: white;
+}
+
+.NewsContainerTimer {
+    position: relative;
+    width: 50%;
+    height: 5em;
+    margin-top: 20px;
+}
+
+.NewsContainerTimerLine {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: translateY(-50%);
+}
+
+.NewsContainerTimerCircle {
+    position: absolute;
+    top: 50%;
+    width: 1em;
+    height: 1em;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /* transition: left 0.05s linear; */
+}

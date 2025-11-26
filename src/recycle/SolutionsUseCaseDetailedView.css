@@ -1,0 +1,149 @@
+.SolutionsUseCaseDetailedViewContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.SolutionsUseCaseDetailedViewIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
+
+.SolutionsUseCaseDetailedViewIntroTitleBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SolutionsIndividualIPageIntroTitleAccent {
+    box-sizing: border-box;
+    background-color: var(--base-text-color);
+    width: 100%;
+    max-width: max-content;
+    min-width: 250px;
+    height: max-content;
+    align-self: flex-start;
+    border-width: 2px 2px 2px 0px;
+    border-style: solid;
+    border-color: var(--accent-color);
+    padding: 1em;
+}
+
+.SolutionsUseCaseDetailedViewIntroTitle {
+    padding-top: 10px;
+    padding-right: 25px;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.SolutionsUseCaseDetailedViewIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    padding: 0px 5vw;
+    text-align: left;
+}
+
+.SolutionsUseCaseDetailedViewCloseButton {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.SolutionsUseCaseDetailedViewContentWrapper {
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.SolutionsUseCaseDetailedViewSubheader {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.SolutionsUseCaseDetailedViewContentWrapper p {
+    color: var(--base-text-color);
+}
+
+.SolutionsUseCaseDetailedViewList {
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+.SolutionsUseCaseDetailedViewListItem {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.8em;
+    color: var(--base-text-color);
+}
+
+.SolutionsUseCaseDetailedViewListItem::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.SolutionsUseCaseDetailedViewCloseArrow {
+    color: var(--accent-color);
+    transition: transform 0.2s ease;
+}
+
+.SolutionsUseCaseDetailedViewCloseButton p {
+    color: var(--accent-color);
+    font-size: 0.5em;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    margin: 5px;
+    font-weight: 600;
+}
+
+.SolutionsUseCaseDetailedViewCloseButton:hover .SolutionsUseCaseDetailedViewCloseArrow {
+    transform: translateX(-4px);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+}
+
+.SolutionsUseCaseDetailedViewCloseButton:hover p {
+    opacity: 1;
+}
+
+@media (max-width:600px) {
+    .SolutionsUseCaseDetailedViewContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .SolutionsUseCaseDetailedViewContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .SolutionsUseCaseDetailedViewContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

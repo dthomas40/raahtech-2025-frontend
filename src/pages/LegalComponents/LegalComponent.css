@@ -1,0 +1,122 @@
+.LegalComponentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-color);
+}
+
+.LegalComponentIntroHeader {
+  text-align: center;
+  border-bottom: 1px solid var(--base-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.LegalComponentIntroHeaderContent {
+  margin: 0 auto;
+}
+
+.LegalComponentTitleRow {
+  margin-bottom: 10px;
+}
+
+.LegalComponentIntroTitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.LegalComponentDate,
+.LegalComponentAuthor {
+  font-size: 1em;
+  color: var(--base-text-color);
+}
+
+.LegalComponentWrapperMainContent {
+  max-width: 80vw;
+}
+
+.LegalComponentWrapperMainContentSection {
+  margin-bottom: 2em;
+}
+
+.LegalComponentWrapperMainContentSectionHeading {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.LegalComponentSubHeading {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--base-text-color);
+}
+
+.LegalComponentParagraph {
+  font-size: 1em;
+  color: var(--base-text-color);
+}
+
+.LegalComponentParagraph a {
+  color: var(--base-text-color);
+  text-decoration: none;
+}
+
+.LegalComponentParagraph a:hover {
+  text-decoration: underline;
+}
+
+.LegalComponentParagraph span {
+  font-weight: 600;
+  color: var(--base-text-color);
+}
+
+.LegalComponentList {
+  list-style-type: disc;
+  margin-left: 1em;
+  color: var(--base-text-color);
+}
+
+.LegalComponentList li {
+  margin-bottom: 0.5em;
+}
+
+.LegalComponentWrapperFooterSection {
+  border-top: 1px solid var(--base-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 1em 0;
+  text-align: center;
+}
+
+.LegalComponentWrapperFooterSectionContent {
+  margin: 0 auto;
+}
+
+.LegalComponentWrapperFooterSectionText {
+  font-size: 0.75em;
+  color: var(--base-text-color);
+}
+
+
+@media (max-width: 600px) {
+  .LegalComponentContainer {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width:1200px) {
+  .LegalComponentContainer {
+    font-size: 20px;
+  }
+}
+
+@media (min-width:1800px) {
+  .LegalComponentContainer {
+    font-size: 28px;
+  }
+}

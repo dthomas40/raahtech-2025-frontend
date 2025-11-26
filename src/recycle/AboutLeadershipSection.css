@@ -1,0 +1,149 @@
+.AboutLeadershipSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.AboutLeadershipSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+.AboutLeadershipSectionIntroTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.AboutLeadershipSectionIntroDescription {
+    font-size: 1em;
+    text-align: center;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: left;
+}
+
+.AboutLeadershipSectionLeadersWrapper {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    width: 80vw;
+}
+
+.AboutLeadershipSectionLeaderCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.AboutLeadershipSectionLeaderCard:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.AboutLeadershipSectionLeaderCardExtension {
+    background-color: var(--accent-color);
+    border: 5px solid var(--accent-color);
+    max-height: 0em;
+    overflow-y: hidden;
+    width: calc(15em - 10px);
+    animation: AboutLeadershipSectionLeaderCardExtensionExpand 3s forwards;
+    transition: all 3s ease-in-out;
+}
+
+@keyframes AboutLeadershipSectionLeaderCardExtensionExpand {
+    to {
+        max-height: 100em;
+    }
+}
+
+.AboutLeadershipSectionLeaderCardExtension p {
+    color: var(--tag-color);
+    margin-inline: 1em;
+    text-align: center;
+}
+
+.AboutLeadershipSectionLeaderImage {
+    width: 10em;
+    height: auto;
+    z-index: 1;
+    display: block;
+    position: relative;
+    transform: translateY(75px);
+}
+
+.AboutLeadershipSectionLeaderContent {
+    width: 15em;
+    height: max-content;
+    aspect-ratio: 1/1;
+    padding: 1em;
+    background-color: var(--about-leadership-section-leader-content-bg-color);
+    border: 5px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.AboutLeadershipSectionLeaderContent p {
+    color: var(--about-leadership-card-p-color);
+}
+
+.AboutLeadershipSectionLeaderName {
+    color: var(--accent-color);
+    font-size: 1em;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+}
+
+.AboutLeadershipSectionLeaderPosition {
+    color: white;
+    font-size: 1em;
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+.AboutLeadershipSectionLeaderQuote {
+    color: white;
+    font-size: 0.75em;
+    justify-self: center;
+    align-self: center;
+}
+
+
+@media (max-width:600px) {
+    .AboutLeadershipSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutLeadershipSectionContainer {
+        font-size: 20px;
+        row-gap: 50px;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutLeadershipSectionContainer {
+        font-size: 28px;
+        row-gap: 50px;
+    }
+}

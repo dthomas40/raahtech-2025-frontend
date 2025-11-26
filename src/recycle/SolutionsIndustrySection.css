@@ -1,0 +1,147 @@
+.SolutionsIndustryContainer {
+    background-color: var(--bg-color);
+    width: 100%;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:600px) {
+    .SolutionsIndustryContainer {
+        font-size: 12px;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width:1200px) {
+    .SolutionsIndustryContainer {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1800px) {
+    .SolutionsIndustryContainer {
+        font-size: 28px;
+    }
+}
+
+.SolutionsIndustryBlockContainer {
+    width: 85%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    column-gap: 2em;
+    padding: 1em;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.SolutionsIndustryBlockContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.SolutionsIndustryBlockContainer a {
+    text-decoration: none !important;
+}
+
+.SolutionsIndustryBlock {
+    width: 15em;
+    min-width: 15em;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    border-radius: 1em;
+    padding: 1em;
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+    color: black;
+    position: relative;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.SolutionsIndustryBlock:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    border: 2px solid var(--accent-color);
+    background-color: white;
+}
+
+.SolutionsIndustryBlock:hover h3 {
+    text-decoration: underline;
+}
+
+.SolutionsIndustryBlockIconTop {
+    margin-bottom: 2em;
+    align-self: flex-start;
+}
+
+.SolutionsIndustryBlockIcon {
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SolutionsIndustryBlockIcon svg {
+    fill: transparent;
+    stroke: var(--accent-color);
+    stroke-width: 25;
+    transition: all 0.5s ease-in-out;
+}
+
+.SolutionsIndustryBlock:hover .SolutionsIndustryBlockIcon svg {
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
+    stroke-width: 0;
+}
+
+.SolutionsIndustryBlockTextContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.SolutionsIndustryBlockTitle {
+    color: var(--accent-color);
+    width: 100%;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.SolutionsIndustryBlockDescription {
+    width: 90%;
+    font-size: .75em;
+    color: var(--base-text-color);
+    text-decoration: none !important;
+    margin-top: .5em;
+}
+
+.SolutionsIndustryTagContainer {
+    width: 90%;
+    display: flex;
+}
+
+.SolutionsIndustryTag:first-of-type {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.SolutionsIndustryTag {
+    font-size: .75em;
+    margin-inline: .5em;
+    padding: .5em 1em;
+    border-radius: .5em;
+    background-color: black;
+    color: white;
+}

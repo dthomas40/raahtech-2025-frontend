@@ -1,0 +1,266 @@
+.ExploreBreachTimeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    background-color: var(--bg-color);
+}
+
+@media (max-width: 400px) {
+    .ExploreBreachTimeline {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .ExploreBreachTimeline {
+        font-size: 12px;
+        gap: 5em;
+    }
+
+    .ExploreBreachLine {
+        column-gap: 10vw !important;
+    }
+
+    .ExploreBreachYearTag {
+        width: 80% !important;
+        height: unset !important;
+        padding: 0px !important;
+        padding-block: 1em !important;
+        margin-block: 1em;
+        border-right: 2px solid var(--accent-color);
+        border-block: 2px solid var(--accent-color);
+    }
+
+    .ExploreBreachYearContainer {
+        flex-direction: row !important;
+    }
+
+    .ExploreBreachYear {
+        font-size: 8em !important;
+    }
+
+    .ExploreBreachDetails h2,
+    .ExploreBreachDetails p {
+        width: 100% !important;
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .ExploreBreachDetailsCTA {
+        font-size: 1em;
+    }
+
+    .ExploreBreachDetails h2:first-of-type {
+        margin-top: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ExploreBreachTimeline {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .ExploreBreachTimeline {
+        font-size: 28px;
+    }
+}
+
+.ExploreBreachContent {
+    /* column-gap: 5em; */
+    background-color: var(--bg-color);
+    color: var(--base-text-color);
+    border: none;
+    /* min-height: 150px; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    max-height: 0px;
+    transition: all 1s ease-in-out;
+}
+
+.ExploreBreachContent.ReusableFadeUp {
+    animation: ReusableFadeUp .6s forwards;
+}
+
+.ExploreBreachContent.visible {
+    max-height: 1000px;
+}
+
+.ExploreBreachYearTag {
+    background-color: var(--tag-color);
+    /* border: 2px solid var(--accent-color); */
+    border-left: none;
+    padding: 1em;
+    padding-left: 4em;
+
+    height: 25em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(-100%);
+    animation: ExploreBreachYearTagSlide 1s forwards;
+}
+
+@keyframes ExploreBreachYearTagSlide {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.ExploreBreachYearContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExploreBreachYear {
+    padding: 0px;
+    margin: 0px;
+    font-size: 10em;
+    margin-block: -0.3em;
+    color: var(--bg-color);
+}
+
+.ExploreBreachDetails {
+    /* max-height: 25em;
+    overflow-y: auto; */
+    position: relative;
+    width: calc(80% - 2em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-left: #666 1px solid;
+    padding-left: 2em;
+}
+
+.ExploreBreachDetailsCTAContainer {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.ExploreBreachDetailsCTA {
+    /* position: absolute;
+    top: 0px;
+    right: 0px; */
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1em;
+    margin-block: 1em;
+    padding: .5em 1em;
+    border-radius: 5em;
+    border: none;
+}
+
+.ExploreBreachDetailsCTAArrow {
+    width: auto;
+    height: 1em;
+    filter: invert(1);
+}
+
+.ExploreBreachDetails h2:first-of-type {
+    font-size: 1.5em;
+}
+
+.ExploreBreachDetails h2 {
+    margin-block: 0;
+    font-size: 4em;
+}
+
+.ExploreBreachDetails p {
+    margin-block: 0;
+    font-size: 1em;
+
+    max-height: 15em;
+    overflow-y: auto;
+}
+
+.ExploreBreachDetails h2,
+.ExploreBreachDetails p {
+    width: 80%;
+}
+
+.ExploreBreachInstructions {
+    color: #666;
+    font-style: italic;
+}
+
+.ExploreBreachLine {
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    position: relative;
+    opacity: 0;
+    transform: translateY(150%);
+    animation: ExploreBreachLineFadeUp 1s forwards;
+}
+
+@keyframes ExploreBreachLineFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ExploreBreachLineConnector {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: -1em;
+    width: 100%;
+    height: 1em;
+    border-radius: 1em;
+    padding-inline: 1em;
+    /* Thickness of the line */
+    background-color: var(--tag-color);
+    /* Line color */
+    transform: translateY(-50%);
+}
+
+.ExploreBreachButton {
+    position: relative;
+    z-index: 1;
+    background-color: var(--tag-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(200%);
+    animation: ExploreBreachButtonFadeUp 1s forwards;
+}
+
+@keyframes ExploreBreachButtonFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ExploreBreachButton img {
+    filter: var(--icon-filter);
+}
+
+.ExploreBreach.active .ExploreBreachButton {
+    background-color: var(--accent-color);
+}
+
+.ExploreBreachButton:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--accent-color);
+    width: 49px;
+    height: 49px;
+}

@@ -1,0 +1,253 @@
+.ExploreNewsletterComponentParagraph {
+    margin-bottom: 1em;
+    line-height: 1.7;
+    color: black;
+}
+
+.ExploreNewsletterComponentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.ExploreNewsletterComponentIntroHeader {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--base-text-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.ExploreNewsletterComponentIntroHeaderContent {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ExploreNewsletterComponentTitleRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ExploreNewsletterComponentIntroTitle {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 80%;
+}
+
+.ExploreNewsletterComponentDate {
+    font-size: 1em;
+    color: var(--base-text-color);
+    margin-bottom: 5px;
+}
+
+.ExploreNewsletterComponentAuthor {
+    font-size: 1em;
+    color: var(--base-text-color);
+    margin-bottom: 5px;
+}
+
+.ExploreNewsletterComponentIntroCloseButton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10vw;
+    transition: all 0.2s ease;
+    position: absolute;
+    right: 0;
+}
+
+.ExploreNewsletterComponentIntroCloseArrow {
+    color: var(--accent-color);
+    transition: transform 0.2s ease;
+}
+
+.ExploreNewsletterComponentIntroCloseButton p {
+    color: var(--accent-color);
+    font-size: 0.5em;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    margin: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ExploreNewsletterComponentIntroCloseButton:hover .ExploreNewsletterComponentIntroCloseArrow {
+    transform: translateX(-4px);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+}
+
+.ExploreNewsletterComponentIntroCloseButton:hover p {
+    opacity: 1;
+}
+
+.ExploreNewsletterComponentWrapper {
+    display: flex;
+    width: 100%;
+    max-width: 80vw;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ExploreNewsletterComponentWrapperSidebar {
+    flex: 0 0 250px;
+    padding: 20px;
+    border-right: 1px solid var(--base-text-color);
+    box-sizing: border-box;
+}
+
+.ExploreNewsletterComponentWrapperSidebarTitle {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--base-text-color);
+}
+
+.ExploreNewsletterComponentWrapperSidebarNavList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ExploreNewsletterComponentWrapperSidebarNavListItem {
+    display: block;
+    padding: 8px 0;
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.ExploreNewsletterComponentWrapperSidebarNavListItem:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.ExploreNewsletterComponentWrapperSidebarNavListItem.active {
+    font-weight: 600;
+}
+
+.ExploreNewsletterComponentWrapperMainContent {
+    flex-grow: 1;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.ExploreNewsletterComponentWrapperMainContentSection {
+    margin-bottom: 2.5em;
+}
+
+.ExploreNewsletterComponentImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ExploreNewsletterComponentWrapperMainContentSectionHeading {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.ExploreNewsletterComponentBlockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.ExploreNewsletterComponentWrapperFooterSection {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--base-text-color);
+    margin-top: 20px;
+}
+
+.ExploreNewsletterComponentWrapperFooterSectionContent {
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ExploreNewsletterComponentWrapperFooterSectionText {
+    font-size: 0.9em;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.ExploreNewsletterComponentWrapperFooterSectionCopyrightText {
+    font-size: 0.75em;
+    color: black;
+    margin-top: 10px;
+}
+
+@media (max-width: 960px) {
+    .ExploreNewsletterComponentWrapper {
+        flex-direction: column;
+    }
+
+    .ExploreNewsletterComponentWrapperSidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--base-text-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .ExploreNewsletterComponentContainer {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .ExploreNewsletterComponentIntroHeader {
+        padding: 15px 0;
+    }
+
+    .ExploreNewsletterComponentWrapperMainContent {
+        padding: 20px;
+    }
+}
+
+@media (min-width:1200px) {
+    .ExploreNewsletterComponentContainer {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ExploreNewsletterComponentContainer {
+        font-size: 28px;
+    }
+}

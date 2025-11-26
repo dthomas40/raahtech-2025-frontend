@@ -1,0 +1,85 @@
+.AboutAddressContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    background-color: var(--bg-color);
+}
+
+.AboutAddressCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    background: var(--base-text-color);
+    border-radius: 1em;
+    padding: 1.5em;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.AboutAddressCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.AboutAddressIcon {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.AboutAddressTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutAddressTextLocation {
+    font-size: 1.5em;
+    margin: 0 0 0.5em 0;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.AboutAddressTextAddress {
+    font-size: 1em;
+    color: var(--nav-color);
+}
+
+@media (max-width: 600px) {
+    .AboutAddressContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width:600px) {
+    .AboutAddressContainer {
+        font-size: 12px;
+        row-gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .AboutAddressCard {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutAddressContainer {
+        font-size: 20px;
+        row-gap: 50px;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutAddressContainer {
+        font-size: 20px;
+        row-gap: 50px;
+    }
+}

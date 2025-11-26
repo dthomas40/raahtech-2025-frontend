@@ -1,0 +1,23 @@
+.BottomGap {
+    height: 10em;
+    background-color: var(--bg-color);
+}
+
+@media (max-width:600px) {
+    .BottomGap {
+        height: 10em;
+        font-size: 12px;
+    }
+}
+
+@media (min-width:1200px) {
+    .BottomGap {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1800px) {
+    .BottomGap {
+        font-size: 28px;
+    }
+}

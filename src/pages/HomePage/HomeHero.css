@@ -1,0 +1,412 @@
+.HomeHero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--base-text-color);
+    background-color: var(--bg-color);
+    padding-block: 1em;
+    row-gap: 50px;
+}
+
+.HomeHeroDetailedViewGraphic,
+.HomeHeroDetailedViewGraphic img {
+    width: 100px;
+    height: 100px;
+}
+
+.HomeHeroDescription {
+    width: 80vw;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.HomeHeroDescription span {
+    color: var(--accent-color);
+}
+
+.HomeHeroInteractive {
+    width: calc(100vw - 5em);
+    display: flex;
+    justify-content: center;
+    column-gap: 5em;
+}
+
+.HomeHeroCastle {
+    width: 40vw;
+    height: auto;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HomeHeroCastleMainGraphic {
+    width: 30vw;
+    padding: 10vw;
+    animation: ReusableFadeUp 1s forwards;
+}
+
+/* ----------------------------------
+   BRICKS (clickable regions on castle)
+   ---------------------------------- */
+.HomeHeroCastleInteractiveBrick {
+    position: absolute;
+    display: inline-block;
+
+    --corner-len: 0.5em;
+    --corner-thick: 2px;
+    --corner-color: var(--base-text-color);
+    --h: 0;
+    --v: 0;
+}
+
+/* Brick placements */
+.brick-IGA {
+    top: 1em;
+    left: 1em;
+}
+
+.brick-IAM {
+    top: 1em;
+    right: 1em;
+}
+
+.brick-CIAM {
+    bottom: 1em;
+    left: 1em;
+}
+
+.brick-PAM {
+    bottom: 1em;
+    right: 1em;
+}
+
+/* Hover behavior (scale only) */
+.HomeHeroCastleInteractiveBrick:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+}
+
+.HomeHeroCastleInteractiveBrick.active {
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    --h: var(--corner-len);
+    --v: var(--corner-len);
+
+}
+
+/* Label inside brick stays above corners */
+.HomeHeroCastleInteractiveBrick span {
+    position: absolute;
+    font-size: .9em;
+    top: 38%;
+    left: 38%;
+    transform: translateX(-50%) skew(30deg) rotate(40deg);
+    padding: 0px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
+    transition: all .5s ease-in-out;
+    z-index: 3;
+    /* ensure text renders above corner layer */
+}
+
+/* Corner layer (no extra elements) */
+.HomeHeroCastleInteractiveBrick::after {
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    bottom: 0.5em;
+    left: -1em;
+    right: -1em;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+
+    transform: skew(50deg) rotate(140deg);
+    transform-origin: 50% 50%;
+    will-change: transform, background-size, opacity;
+
+    /* 8 gradient layers: 2 per corner (horizontal + vertical) */
+    background:
+        /* top-left */
+        linear-gradient(var(--corner-color), var(--corner-color)) top left / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) top left / var(--corner-thick) var(--v) no-repeat,
+
+        /* top-right */
+        linear-gradient(var(--corner-color), var(--corner-color)) top right / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) top right / var(--corner-thick) var(--v) no-repeat,
+
+        /* bottom-left */
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom left / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom left / var(--corner-thick) var(--v) no-repeat,
+
+        /* bottom-right */
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom right / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom right / var(--corner-thick) var(--v) no-repeat;
+
+    /* fade + draw animation */
+    transition:
+        opacity .28s ease,
+        background-size .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* Active: corners fade in and stay visible */
+.HomeHeroCastleInteractiveBrick.active::after {
+    opacity: 1;
+}
+
+/* Brick image */
+.HomeHeroCastleInteractiveBrick img {
+    display: block;
+    width: 4em;
+    height: auto;
+    z-index: 1;
+}
+
+/* Underline accent on label (kept from your file) */
+.HomeHeroCastleInteractiveBrick span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    /* Start with no width */
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    /* Center the line */
+    transform: translateX(-50%);
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+
+.HomeHeroCastleInteractiveBrick:hover span,
+.HomeHeroCastleInteractiveBrick.active span {
+    cursor: pointer;
+    color: var(--accent-color);
+    transition: all .5s ease-in-out;
+}
+
+.HomeHeroCastleInteractiveBrick:hover span::after,
+.HomeHeroCastleInteractiveBrick.active span::after {
+    width: 0%;
+    background-color: var(--accent-color);
+}
+
+/* ---------------------------------- */
+
+.HomeHeroDetailedView {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeHeroDetailedView.ReusableFadeUp {
+    animation: ReusableFadeUp 0.6s ease-out;
+}
+
+.HomeHeroDetailedView h2 {
+    text-align: left;
+    font-size: 1.5em;
+    color: var(--home-hero-detailed-view);
+}
+
+
+.HomeHeroDetailedView h3 {
+    color: var(--accent-color);
+}
+
+.HomeHeroDetailedView h3 {
+    font-size: 1.25em;
+}
+
+.HomeHeroDetailedViewTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.HomeHeroDetailedViewContentGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.HomeHeroDetailedViewContentTitle {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.HomeHeroDetailedViewContentDescription {
+    height: max-content;
+}
+
+.HomeHeroDetailedViewContentDescriptionCTAContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA {
+    --color: var(--bg-color);
+    padding: 0.2em 1em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 1em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA img {
+    padding-left: 5px;
+    height: 1em;
+    filter: var(--icon-filter);
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA::before,
+.HomeHeroDetailedViewContentDescriptionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA:hover::before,
+.HomeHeroDetailedViewContentDescriptionCTA:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.HomeHeroDetailedViewContentDescriptionCTA:active {
+    filter: brightness(.8);
+}
+
+.HomeHeroCTAPanel {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50px);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .HomeHeroCastleInteractiveBrick::after {
+        transition: none;
+    }
+}
+
+@media (max-width:600px) {
+    .HomeHero {
+        font-size: 12px;
+        row-gap: 3em;
+    }
+
+    .HomeHeroDetailedView {
+        height: max-content;
+    }
+
+    .HomeHeroInteractive {
+        row-gap: 3em;
+    }
+
+    .HomeHeroCTAPanel {
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width:1200px) {
+    .HomeHero {
+        font-size: 20px;
+    }
+
+    .HomeHeroInteractive {
+        align-items: center;
+    }
+
+    .HomeHeroCastle {
+        max-width: 550px;
+        max-height: 550px;
+    }
+}
+
+@media (min-width:1800px) {
+    .HomeHero {
+        font-size: 28px;
+    }
+
+    .HomeHeroDetailedViewGraphic,
+    .HomeHeroDetailedViewGraphic img {
+        display: block !important;
+        width: 150px;
+        height: 150px;
+    }
+
+    .HomeHeroInteractive {
+        align-items: center;
+    }
+
+    .HomeHeroCastle {
+        max-width: 850px;
+        max-height: 850px;
+    }
+}
+
+@media (max-width:850px) {
+    .HomeHeroInteractive {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HomeHeroCastle {
+        width: 80vw !important;
+    }
+
+    .HomeHeroCastleMainGraphic {
+        width: 50vw !important;
+    }
+
+    .HomeHeroDetailedView {
+        width: 80vw !important;
+    }
+
+    .HomeHeroDetailedViewContentDescription {
+        height: unset !important;
+    }
+}

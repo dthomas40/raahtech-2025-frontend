@@ -1,0 +1,176 @@
+.SolutionsChooserSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.SolutionsChooserSectionGraphicsContainer {
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: SolutionsChooserSectionGraphicsContainerFadeUp 1s forwards;
+}
+
+@keyframes SolutionsChooserSectionGraphicsContainerFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.SolutionsChooserSectionGraphicsContainer a {
+    text-decoration: none !important;
+}
+
+.SolutionsChooserSectionGraphicWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    /* padding: 1em; */
+}
+
+.SolutionsChooserSectionGraphicWrapper:hover {
+    cursor: pointer;
+}
+
+.SolutionsChooserSectionGraphicWrapper:hover .SolutionsChooserSectionGraphic {
+    width: 16vw;
+}
+
+.SolutionsChooserSectionGraphicWrapper:hover .SolutionsChooserSectionGraphicTitle {
+    text-decoration: underline;
+}
+
+.SolutionsChooserSectionGraphic {
+    width: 15vw;
+    height: auto;
+    transition: all .5s ease-in-out;
+}
+
+.SolutionsChooserSectionGraphicTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.SolutionsChooserSectionGraphicDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: center;
+}
+
+.SolutionsChooserSectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+    margin-top: auto;
+    align-self: center;
+}
+
+.SolutionsChooserSectionCTA img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.SolutionsChooserSectionCTA::before,
+.SolutionsChooserSectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.SolutionsChooserSectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.SolutionsChooserSectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.SolutionsChooserSectionCTA:hover::before,
+.SolutionsChooserSectionCTA:hover::after {
+    height: 610px;
+    width: 610px;
+}
+
+.SolutionsChooserSectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.SolutionsChooserSectionCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:600px) {
+    .SolutionsChooserSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+
+    .SolutionsChooserSectionGraphicsContainer {
+        width: 90vw;
+        row-gap: 2em;
+    }
+
+    .SolutionsChooserSectionGraphicWrapper {
+        width: 90vw;
+        row-gap: 0.75em;
+    }
+
+    .SolutionsChooserSectionGraphic {
+        width: 50vw;
+    }
+
+    .SolutionsChooserSectionGraphicWrapper:hover .SolutionsChooserSectionGraphic {
+        width: 50vw;
+    }
+}
+
+@media (min-width:1200px) {
+    .SolutionsChooserSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .SolutionsChooserSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

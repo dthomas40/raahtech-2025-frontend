@@ -1,0 +1,244 @@
+.ServicesAdvisorySectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.ServicesAdvisorySectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90vw;
+}
+
+.ServicesAdvisorySectionIntroTitle {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.ServicesAdvisorySectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: left;
+}
+
+.ServicesAdvisorySectionBulletsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ServicesAdvisorySectionBullet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: first baseline;
+    column-gap: 2em;
+}
+
+.ServicesAdvisorySectionBulletFocus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: first baseline;
+}
+
+.ServicesAdvisorySectionBulletTitle {
+    color: var(--accent-color);
+    text-align: right;
+    font-weight: 600;
+    width: 20vw;
+}
+
+.ServicesAdvisorySectionBulletDescription {
+    color: var(--base-text-color);
+    text-align: left;
+    width: 50vw;
+}
+
+.ServicesAdvisorySectionBulletFocusTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2em;
+}
+
+.ServicesAdvisorySectionFocusAreasContainer {
+    display: flex;
+    column-gap: 1em;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+.ServicesAdvisorySectionFocusModal {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+        max-height 0.6s ease,
+        opacity 0.4s ease,
+        margin-top 0.6s ease,
+        padding-top 0.6s ease;
+    width: 100%;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+.ServicesAdvisorySectionFocusModal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ServicesAdvisorySectionFocusTitle {
+    background: none;
+    border: none;
+    color: var(--base-text-color);
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.ServicesAdvisorySectionFocusTitle.active {
+    color: var(--accent-color);
+}
+
+.ServicesAdvisorySectionFocusModalTitle {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.ServicesAdvisorySectionFocusModalDescription {
+    font-size: 1em;
+    color: var(--base-text-color);
+    width: 100%;
+}
+
+.ServicesAdvisorySectionButtonImageContainer {
+    position: relative;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vw;
+}
+
+.ServicesAdvisorySectionGraphic {
+    position: absolute;
+    right: 0;
+    width: 15vw;
+    height: auto;
+}
+
+.ServicesAdvisorySectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.ServicesAdvisorySectionCTA img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.ServicesAdvisorySectionCTA::before,
+.ServicesAdvisorySectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.ServicesAdvisorySectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.ServicesAdvisorySectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.ServicesAdvisorySectionCTA:hover::before,
+.ServicesAdvisorySectionCTA:hover::after {
+    height: 610px;
+    width: 610px;
+}
+
+.ServicesAdvisorySectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.ServicesAdvisorySectionCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:600px) {
+    .ServicesAdvisorySectionContainer {
+        font-size: 12px;
+        row-gap: 0px;
+    }
+
+    .ServicesAdvisorySectionBulletsContainer,
+    .ServicesAdvisorySectionFocusModal {
+        width: 80vw;
+    }
+
+    .ServicesAdvisorySectionButtonImageContainer {
+        width: 90vw;
+    }
+}
+
+@media (min-width:1200px) {
+    .ServicesAdvisorySectionContainer {
+        font-size: 20px;
+        row-gap: 0px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ServicesAdvisorySectionContainer {
+        font-size: 28px;
+        row-gap: 0px;
+    }
+}

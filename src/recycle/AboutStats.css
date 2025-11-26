@@ -1,0 +1,54 @@
+.AboutStatsContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.AboutStatsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90vw;
+}
+
+.AboutStatsContent {
+    text-align: center;
+    min-width: 200px;
+    flex: 1;
+}
+
+.AboutStatsTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.AboutStatsDescription {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+@media (max-width:600px) {
+    .AboutStatsContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutStatsContainer {
+        font-size: 20px;
+        row-gap: 50px;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutStatsContainer {
+        font-size: 28px;
+        row-gap: 50px;
+    }
+}

@@ -1,0 +1,64 @@
+.HomeQuoteSlider {
+    overflow-x: hidden;
+    width: 100%;
+    height: 10em;
+    background-color: var(--tag-color);
+    border-block: 3px solid var(--accent-color);
+    color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* transition: all 0.5s ease-in-out; */
+}
+
+@media (max-width:600px) {
+    .HomeQuoteSlider {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .HomeQuoteSlider {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .HomeQuoteSlider {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}
+
+.HomeQuoteText,
+.HomeQuoteName {
+    margin: 0;
+    opacity: 0;
+    transform: translateX(50%);
+    animation: HomeQuoteFadeIn 1s forwards;
+}
+
+@keyframes HomeQuoteFadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.HomeQuote {
+    width: 80%;
+
+}
+
+.HomeQuoteText {
+    font-size: 1em;
+}
+
+.HomeQuoteName {
+    /* font-size: font; */
+    margin-top: 1em;
+    font-weight: 600;
+}

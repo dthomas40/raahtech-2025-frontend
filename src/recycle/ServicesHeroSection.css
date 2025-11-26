@@ -1,0 +1,272 @@
+.ServicesHeroSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* padding: 4em 0; */
+}
+
+.ServicesHeroSectionIntro {
+    text-align: center;
+    width: 80vw;
+}
+
+.ServicesHeroSectionIntroTitle {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.ServicesHeroSectionContent {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: ServicesHeroSectionContentFadeUp 1s forwards;
+}
+
+@keyframes ServicesHeroSectionContentFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ServicesHeroSectionContentItems {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.ServicesHeroSectionContentItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    min-height: 32vw;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ServicesHeroSectionContentImageWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ServicesHeroSectionContentImage {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.ServicesHeroSectionContentImageWrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    height: 60%;
+    background-color: var(--services-hero-section-contact-image-wrapper-after-box);
+    z-index: 0;
+}
+
+.ServicesHeroSectionContentImage:hover {
+    transform: scale(1.1);
+}
+
+.ServicesHeroSectionContentDetailedView {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    margin-top: 1em;
+    width: 15vw;
+    position: relative;
+    /* can be kept or removed */
+}
+
+.ServicesHeroSectionContentDetailedViewTitle {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.ServicesHeroSectionContentDetailedViewDescription {
+    color: var(--base-text-color);
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+
+.ServicesHeroSectionContentDetailedViewCTA {
+    --color: var(--bg-color);
+    background-color: var(--services-hero-section-contact-image-wrapper-after-box);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.75em;
+    padding: 0.3em;
+    border: 2px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--base-text-color);
+    color: var(--accent-color);
+    z-index: 1;
+    margin-top: auto;
+    /* ✅ pushes to the bottom */
+    width: max-content;
+}
+
+.ServicesHeroSectionContentDetailedViewCTA:hover {
+    text-decoration: underline;
+}
+
+.ServicesHeroSectionContentDetailedViewCTA img {
+    padding-left: 5px;
+    height: 1em;
+}
+
+.ServicesHeroSectionContentCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.ServicesHeroSectionContentCTA img {
+    height: 1.25em;
+}
+
+.ServicesHeroSectionContentCTA::before,
+.ServicesHeroSectionContentCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.ServicesHeroSectionContentCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.ServicesHeroSectionContentCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.ServicesHeroSectionContentCTA:hover::before,
+.ServicesHeroSectionContentCTA:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.ServicesHeroSectionContentCTA:hover {
+    color: var(--base-text-color);
+}
+
+.ServicesHeroSectionContentCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:1024px) {
+    .ServicesHeroSectionContainer {
+        font-size: 18px;
+        padding: 2em 0;
+    }
+
+    .ServicesHeroSectionContentItems {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 0px;
+    }
+
+    .ServicesHeroSectionContentItem {
+        width: 35vw;
+    }
+
+    .ServicesHeroSectionContentDetailedView {
+        width: 35vw;
+    }
+
+    .ServicesHeroSectionContentDetailedViewDescription {
+        height: 200px;
+    }
+}
+
+@media (max-width:600px) {
+    .ServicesHeroSectionContainer {
+        font-size: 12px;
+        padding: 2em 0;
+    }
+
+    .ServicesHeroSectionContentItems {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 0px;
+    }
+
+    .ServicesHeroSectionContentItem {
+        width: 35vw;
+        height: max-content;
+    }
+
+    .ServicesHeroSectionContentDetailedView {
+        width: 35vw;
+    }
+
+    .ServicesHeroSectionContentDetailedViewDescription {
+        height: 150px;
+    }
+
+    .ServicesHeroSectionContentDetailedViewCTA {
+        font-size: 0.6em;
+    }
+}
+
+@media (min-width:1200px) {
+    .ServicesHeroSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ServicesHeroSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

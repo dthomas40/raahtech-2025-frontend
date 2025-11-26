@@ -1,0 +1,112 @@
+.AboutConsultationSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.AboutConsultationSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+.AboutConsultationSectionIntroTitle {
+    text-align: right;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.AboutConsultationSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.AboutConsultationSectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.AboutConsultationSectionCTA img {
+    height: 1.25em;
+}
+
+.AboutConsultationSectionCTA::before,
+.AboutConsultationSectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.AboutConsultationSectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.AboutConsultationSectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.AboutConsultationSectionCTA:hover::before,
+.AboutConsultationSectionCTA:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.AboutConsultationSectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.AboutConsultationSectionCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:600px) {
+    .AboutConsultationSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutConsultationSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutConsultationSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

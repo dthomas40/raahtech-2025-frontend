@@ -1,0 +1,279 @@
+.HomeUseCaseSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    row-gap: 50px;
+}
+
+@media (max-width:600px) {
+    .HomeUseCaseSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .HomeUseCaseSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .HomeUseCaseSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}
+
+.HomeUseCaseSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.HomeUseCaseSectionIntroTitle {
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.HomeUseCaseSectionDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+}
+
+.HomeUseCaseSectionGraphics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 1000px;
+    height: 40vw;
+    max-height: 300px;
+}
+
+.HomeUseCaseGraphicWrapper {
+    --corner-len: 18px;
+    /* length of each corner arm */
+    --corner-thick: 3px;
+    /* line thickness */
+    --corner-color: var(--base-text-color);
+
+    /* animated sizes (0 -> corner-len) */
+    --h: 0;
+    --v: 0;
+
+    position: relative;
+    width: 30%;
+    max-width: 240px;
+    cursor: pointer;
+    transition: width .5s ease-in-out;
+    display: inline-block;
+}
+
+.HomeUseCaseGraphicWrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+
+    /* 8 gradient layers = 2 per corner (horizontal + vertical) */
+    background:
+        /* top-left */
+        linear-gradient(var(--corner-color), var(--corner-color)) top left / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) top left / var(--corner-thick) var(--v) no-repeat,
+
+        /* top-right */
+        linear-gradient(var(--corner-color), var(--corner-color)) top right / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) top right / var(--corner-thick) var(--v) no-repeat,
+
+        /* bottom-left */
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom left / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom left / var(--corner-thick) var(--v) no-repeat,
+
+        /* bottom-right */
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom right / var(--h) var(--corner-thick) no-repeat,
+        linear-gradient(var(--corner-color), var(--corner-color)) bottom right / var(--corner-thick) var(--v) no-repeat;
+
+    transition:
+        opacity .28s ease,
+        background-size .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+.HomeUseCaseGraphicWrapper.selected {
+    width: 40%;
+    max-width: 280px;
+    --h: var(--corner-len);
+    --v: var(--corner-len);
+}
+
+.HomeUseCaseGraphicWrapper.selected::after {
+    opacity: 1;
+}
+
+.HomeUseCaseGraphicWrapper:not(.selected):hover::after {
+    opacity: 0;
+}
+
+.HomeUseCaseGraphicImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+    opacity: 1;
+}
+
+.HomeUseCaseGraphicImage.selected {
+    animation: none;
+    border-radius: 1em;
+    max-width: 350px;
+    background: none !important;
+}
+
+/* Optional: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .HomeUseCaseGraphicWrapper,
+    .HomeUseCaseGraphicWrapper::after {
+        transition: none;
+    }
+}
+
+.HomeUseCaseSectionDetailedView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    width: 70vw;
+}
+
+.HomeUseCaseSectionDetailedView.ReusableFadeUp {
+    animation: ReusableFadeUp 1s forwards;
+}
+
+.HomeUseCaseSectionDetailsTitle {
+    margin: 0;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.HomeUseCaseSectionDetailsDescription {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--base-text-color);
+    font-size: 1em;
+}
+
+.HomeUseCaseSectionDetailsDescription span {
+    color: var(--accent-color);
+}
+
+.HomeUseCaseSectionIntroCTA,
+.HomeUseCaseSectionDetailsCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.HomeUseCaseSectionIntroCTA img,
+.HomeUseCaseSectionDetailsCTA img {
+    padding-left: 5px;
+    height: 1em;
+    filter: var(--icon-filter);
+}
+
+.HomeUseCaseSectionIntroCTA::before,
+.HomeUseCaseSectionIntroCTA::after,
+.HomeUseCaseSectionDetailsCTA::before,
+.HomeUseCaseSectionDetailsCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.HomeUseCaseSectionIntroCTA::before,
+.HomeUseCaseSectionDetailsCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.HomeUseCaseSectionIntroCTA::after,
+.HomeUseCaseSectionDetailsCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.HomeUseCaseSectionIntroCTA:hover::before,
+.HomeUseCaseSectionIntroCTA:hover::after,
+.HomeUseCaseSectionDetailsCTA:hover::before,
+.HomeUseCaseSectionDetailsCTA:hover::after {
+    height: 510px;
+    width: 510px;
+}
+
+.HomeUseCaseSectionIntroCTA:hover,
+.HomeUseCaseSectionDetailsCTA:hover {
+    color: var(--base-text-color);
+}
+
+.HomeUseCaseSectionIntroCTA:active,
+.HomeUseCaseSectionDetailsCTA:active {
+    filter: brightness(.8);
+}
+
+.HomeUseCaseSectionDetailsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+    background-color: var(--home-use-case-table-bg-color);
+}
+
+.HomeUseCaseSectionDetailsTable td {
+    padding: 0.75em;
+    /* vertical-align: top; */
+    border: 5px solid var(--bg-color);
+    color: var(--home-use-case-table-text-color);
+}
+
+.label-cell {
+    font-weight: bold;
+    color: var(--accent-color);
+    width: 30%;
+    white-space: nowrap;
+    text-align: center;
+}

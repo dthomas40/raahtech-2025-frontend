@@ -1,0 +1,89 @@
+.AboutStatsContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.AboutStatsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90vw;
+    gap: 2rem; /* adds breathing room between items */
+}
+
+.AboutStatsContent {
+    text-align: center;
+    min-width: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.AboutStatsIcon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.AboutStatsIcon:hover {
+    transform: scale(1.15);
+    color: var(--highlight-color, gold); /* fallback highlight on hover */
+}
+
+.AboutStatsTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0.25rem 0;
+}
+
+.AboutStatsDescription {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--base-text-color);
+    margin-top: 0.25rem;
+}
+
+@media (max-width:600px) {
+    .AboutStatsContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+
+    .AboutStatsIcon {
+        font-size: 2rem;
+    }
+
+    .AboutStatsTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutStatsContainer {
+        font-size: 20px;
+        row-gap: 50px;
+    }
+
+    .AboutStatsIcon {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutStatsContainer {
+        font-size: 28px;
+        row-gap: 50px;
+    }
+
+    .AboutStatsIcon {
+        font-size: 4rem;
+    }
+}

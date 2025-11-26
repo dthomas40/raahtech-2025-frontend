@@ -1,0 +1,244 @@
+.ServicesSupportSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.ServicesSupportSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90vw;
+}
+
+.ServicesSupportSectionIntroTitle {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.ServicesSupportSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: left;
+}
+
+.ServicesSupportSectionBulletsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ServicesSupportSectionBullet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: first baseline;
+    column-gap: 2em;
+}
+
+.ServicesSupportSectionBulletFocus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: first baseline;
+}
+
+.ServicesSupportSectionBulletTitle {
+    color: var(--accent-color);
+    text-align: right;
+    font-weight: 600;
+    width: 20vw;
+}
+
+.ServicesSupportSectionBulletDescription {
+    color: var(--base-text-color);
+    text-align: left;
+    width: 50vw;
+}
+
+.ServicesSupportSectionBulletFocusTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2em;
+}
+
+.ServicesSupportSectionFocusAreasContainer {
+    display: flex;
+    column-gap: 1em;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+.ServicesSupportSectionFocusModal {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+        max-height 0.6s ease,
+        opacity 0.4s ease,
+        margin-top 0.6s ease,
+        padding-top 0.6s ease;
+    width: 100%;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+.ServicesSupportSectionFocusModal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ServicesSupportSectionFocusTitle {
+    background: none;
+    border: none;
+    color: var(--base-text-color);
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.ServicesSupportSectionFocusTitle.active {
+    color: var(--accent-color);
+}
+
+.ServicesSupportSectionFocusModalTitle {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.ServicesSupportSectionFocusModalDescription {
+    font-size: 1em;
+    color: var(--base-text-color);
+    width: 100%;
+}
+
+.ServicesSupportSectionButtonImageContainer {
+    position: relative;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vw;
+}
+
+.ServicesSupportSectionGraphic {
+    position: absolute;
+    right: 0;
+    width: 15vw;
+    height: auto;
+}
+
+.ServicesSupportSectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+}
+
+.ServicesSupportSectionCTA img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.ServicesSupportSectionCTA::before,
+.ServicesSupportSectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.ServicesSupportSectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.ServicesSupportSectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.ServicesSupportSectionCTA:hover::before,
+.ServicesSupportSectionCTA:hover::after {
+    height: 610px;
+    width: 610px;
+}
+
+.ServicesSupportSectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.ServicesSupportSectionCTA:active {
+    filter: brightness(.8);
+}
+
+@media (max-width:600px) {
+    .ServicesSupportSectionContainer {
+        font-size: 12px;
+        row-gap: 0px;
+    }
+
+    .ServicesSupportSectionBulletsContainer,
+    .ServicesSupportSectionFocusModal {
+        width: 80vw;
+    }
+
+    .ServicesSupportSectionButtonImageContainer {
+        width: 90vw;
+    }
+}
+
+@media (min-width:1200px) {
+    .ServicesSupportSectionContainer {
+        font-size: 20px;
+        row-gap: 0px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ServicesSupportSectionContainer {
+        font-size: 28px;
+        row-gap: 0px;
+    }
+}

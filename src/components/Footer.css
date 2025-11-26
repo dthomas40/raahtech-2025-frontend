@@ -1,0 +1,205 @@
+@media (max-width: 600px) {
+    .Footer {
+        font-size: 12px;
+    }
+
+    .FooterSubscriptionSectionEmailContainer {
+        padding-inline: 1em !important;
+        padding-block: .5em !important;
+        margin-block: .5em !important;
+        border-radius: 3em !important;
+    }
+
+    .FooterSubscriptionSectionEmailContainer input::placeholder {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 800px) {
+    .Footer {
+        flex-direction: column;
+    }
+
+    .FooterIconsSection {
+        flex-direction: row !important;
+        column-gap: 1em;
+        height: unset !important;
+        margin-block: 1em;
+    }
+
+    .FooterSubscriptionSection {
+        flex: unset;
+        height: unset;
+    }
+
+    .FooterSubscriptionSectionEmailContainer {
+        min-width: max-content;
+    }
+
+    .FooterNavigationSection {
+        display: none !important;
+        flex-direction: row !important;
+        column-gap: .5em;
+        flex-wrap: wrap;
+    }
+
+    .FooterCopyright {
+        flex: unset !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Footer {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .Footer {
+        font-size: 28px;
+    }
+}
+
+.Footer {
+    border: 1px solid var(--footer-border-color);
+    width: calc(100% - 2px);
+    height: 20em;
+    background: radial-gradient(ellipse at center, var(--footer-gradient-1) 0%, var(--footer-gradient-2) 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2em;
+}
+
+.FooterIconsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+}
+
+.FooterIconsSection img {
+    width: 1.5em;
+    height: auto;
+    filter: var(--icon-filter)
+}
+
+.FooterSubscriptionSection {
+    display: flex;
+    flex-direction: column;
+    width: max(60vw, 500px);
+    max-width: 90%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: var(--tag-color)
+}
+
+.FooterSubscriptionSection {
+    text-align: center;
+}
+
+.FooterSubscriptionSection p {
+    opacity: 0.8;
+}
+
+.FooterSubscriptionSectionEmailContainer {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--tag-color);
+    border-radius: 1.5em;
+}
+
+.FooterSubscriptionSectionEmailContainer input {
+    height: 1.5em;
+    padding-inline: 10px;
+    margin: 0px;
+    border: none;
+    color: var(--bg-color);
+    background-color: rgba(255, 255, 255, 0);
+    flex: 1;
+    font-size: .75em;
+}
+
+.FooterSubscriptionSectionEmailContainer input:focus {
+    border: none;
+    outline: none;
+    /* Optional: removes blue outline in some browsers */
+    box-shadow: none;
+    /* Optional: removes any focus shadow */
+}
+
+.FooterSubscriptionSectionEmailContainer input::placeholder {
+    color: var(--footer-input-placeholder-color);
+    opacity: 0.9;
+}
+
+.FooterSubscriptionSectionEmailContainer button {
+    cursor: pointer;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.FooterSubscriptionSectionEmailContainer button:hover {
+    transform: scale(1.1);
+}
+
+.FooterSubscriptionSectionEmailContainer img {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.FooterCopyright {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: .9em;
+    color: var(--tag-color);
+    opacity: 0.5 !important;
+}
+
+.FooterNavigationSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .9em;
+    height: 60%;
+}
+
+.FooterNavigationSection a {
+    text-decoration: none;
+    color: var(--footer-nav-text-color);
+}
+
+.FooterLegalLinks {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.FooterLegalLinks a {
+    text-decoration: none;
+    color: var(base-text-color);
+    font-size: .9em;
+}
+
+.FooterLegalLinks a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}

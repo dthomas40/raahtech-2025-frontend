@@ -1,0 +1,140 @@
+.ExploreFindButtonSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.ExploreFindButtonSectionIntro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80vw;
+}
+
+.ExploreFindButtonSectionIntroTitle {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.ExploreFindButtonSectionIntroDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: left;
+}
+
+.ExploreFindButtonSectionWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: center;
+    align-items: stretch;
+    column-gap: 1em;
+    row-gap: 2em;
+}
+
+.ExploreFindButtonSectionCTA {
+    --color: var(--bg-color);
+    padding: 0.5em 3em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 0.75em;
+    border: 3px solid;
+    font-family: "Poppins", sans-serif;
+    border-color: var(--accent-color);
+    color: var(--base-text-color);
+    z-index: 1;
+    margin-top: auto;
+    align-self: center;
+    width: 25vw;
+    min-width: max-content
+}
+
+.ExploreFindButtonSectionCTA img {
+    height: 1.25em;
+    filter: var(--icon-filter);
+}
+
+.ExploreFindButtonSectionCTA::before,
+.ExploreFindButtonSectionCTA::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: 1s ease;
+}
+
+.ExploreFindButtonSectionCTA::before {
+    top: -1em;
+    left: -1em;
+}
+
+.ExploreFindButtonSectionCTA::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.ExploreFindButtonSectionCTA:hover::before,
+.ExploreFindButtonSectionCTA:hover::after {
+    height: 750px;
+    width: 750px;
+}
+
+.ExploreFindButtonSectionCTA:hover {
+    color: var(--base-text-color);
+}
+
+.ExploreFindButtonSectionCTA:active {
+    filter: brightness(.8);
+}
+
+
+@media (max-width:600px) {
+    .ExploreFindButtonSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+    }
+
+    .ExploreFindButtonSectionWrapper {
+        width: 90vw;
+        min-height: auto;
+    }
+
+    .ExploreFindButtonSectionCTA {
+        width: 60vw;
+        min-width: 250px;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .ExploreFindButtonSectionContainer {
+        font-size: 20px;
+        row-gap: 100px;
+    }
+}
+
+@media (min-width:1800px) {
+    .ExploreFindButtonSectionContainer {
+        font-size: 28px;
+        row-gap: 100px;
+    }
+}

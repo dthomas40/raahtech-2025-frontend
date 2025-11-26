@@ -1,0 +1,104 @@
+.AboutMissionSectionContainer {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.AboutMissionSectionGraphic {
+    width: auto;
+    height: auto;
+    max-height: min(40vw, 40vh);
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: AboutMissionSectionGraphicFadeUp 1s forwards;
+}
+
+@keyframes AboutMissionSectionGraphicFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.AboutMissionSectionTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+    opacity: 0;
+    transform: translateX(20%);
+    animation: AboutMissionSectionTextWrapperFadeLeft 1s forwards;
+}
+
+@keyframes AboutMissionSectionTextWrapperFadeLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.AboutMissionSectionTextContainer {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.AboutMissionSectionTextTitle {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.AboutMissionSectionTextDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--base-text-color);
+    text-align: left;
+}
+
+
+@media (max-width:768px) {
+    .AboutMissionSectionContainer {
+        font-size: 12px;
+        row-gap: 10px;
+        flex-direction: column;
+    }
+
+    .AboutMissionSectionGraphic {
+        width: 70vw;
+        max-height: none;
+        height: auto;
+    }
+
+    .AboutMissionSectionTextWrapper {
+        gap: 1em;
+        width: 70vw;
+        height: auto;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutMissionSectionContainer {
+        font-size: 18px;
+        row-gap: 100px;
+    }
+
+    .AboutMissionSectionTextWrapper {
+        height: 30vw;
+    }
+}
+
+@media (min-width:1800px) {
+    .AboutMissionSectionContainer {
+        font-size: 24px;
+        row-gap: 100px;
+    }
+}

@@ -1,0 +1,38 @@
+.PageDividerTestimonialsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    padding-top: 5vh;
+    padding-bottom: 0em;
+}
+
+.PageDividerTestimonials {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.PageDividerTestimonialsLeft,
+.PageDividerTestimonialsRight {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0;
+}
+
+.PageDividerTestimonialsCenter {
+    height: 40px;
+    /* adjust as needed */
+    object-fit: contain;
+    filter: var(--icon-filter);
+}
+
+@media (max-width: 600px) {
+    .PageDividerTestimonialsContainer {
+        padding-block: 4vh;
+    }
+}
