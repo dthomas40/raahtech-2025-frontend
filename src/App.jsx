@@ -19,7 +19,7 @@ import ExploreWhitepaperDetailedViewPage from './pages/ExploreWhitepaperDetailed
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import ExploreNewsLetterDetailedViewPage from './pages/ExploreNewsLetterDetailedViewPage';
-
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -43,6 +43,9 @@ function App() {
         <Route path="/newsletter/:id" element={<ExploreNewsLetterDetailedViewPage />} />
         <Route path='/terms-and-conditions' element={<TermsAndConditionsPage />} />
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+
+        {/* Catch-all 404 */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </Router>

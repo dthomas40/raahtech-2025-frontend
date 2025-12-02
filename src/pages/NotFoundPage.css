@@ -1,0 +1,67 @@
+.notfound-wrapper {
+    height: 80vh;
+    /* take full vertical height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: var(--bg-color);
+    background: var(--base-text-color);
+}
+
+/* Dark mode friendly using prefers-color-scheme */
+@media (prefers-color-scheme: light) {
+    .notfound-wrapper {
+        --bg: #f8fafc;
+        --text: #0f172a;
+    }
+}
+
+.notfound-content {
+    text-align: center;
+    animation: fadeIn 0.7s ease-out;
+}
+
+.notfound-title {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.notfound-message {
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    opacity: 0.8;
+}
+
+.notfound-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: var(--bg-color);
+    color: var(--base-text-color);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.notfound-btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Soft fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
