@@ -10,10 +10,36 @@ const SolutionsPlatformSection = () => {
 
     const icons = Object.entries(iconModules)
         .sort(([a], [b]) => {
-            const getNum = (filename) => Number(filename.match(/PlatformSectionGraphic(\d+)\.png$/)?.[1]);
+            const getNum = (filename) =>
+                Number(filename.match(/PlatformSectionGraphic(\d+)\.png$/)?.[1]);
             return getNum(a) - getNum(b);
         })
-        .map(([, mod]) => mod);
+        .map(([path, mod]) => {
+            const fileName = path.split('/').pop().replace('.png', '');
+            const name = fileName
+                .replace('PlatformSectionGraphic', '')
+                .trim();
+
+            // Map image index → platform slug
+            const slugs = {
+                '1': 'cyberark',
+                '2': 'delinea',
+                '3': 'gigya',
+                '4': 'microsoft',
+                '5': 'okta',
+                '6': 'omada',
+                '7': 'ping',
+                '8': 'radiant-logic',
+                '9': 'saviynt',
+                '10': 'servicenow',
+                '11': 'wso2'
+            };
+
+            return {
+                img: mod,
+                slug: slugs[name]
+            };
+        });
 
     return (
         <>
@@ -26,12 +52,12 @@ const SolutionsPlatformSection = () => {
                     </p>
                 </div>
                 <div className='SolutionsPlatformSectionGraphicsContainer'>
-                    {icons.map((icon, index) => (
-                        <Link key={icon} to={'/platforms/platform-doc-' + (index + 1)}>
-                            <img src={icon}
+                    {icons.map((icon) => (
+                        <Link key={icon.slug} to={`/platforms/${icon.slug}`}>
+                            <img
+                                src={icon.img}
                                 className='PlatformSectionGraphic'
-                                alt='PlatformSection Graphic'
-                                key={icon}
+                                alt={icon.slug}
                             />
                         </Link>
                     ))}

@@ -85,7 +85,7 @@ const getIconForSubheader = (title) => {
 
 const platformDocuments = [
     {
-        id: 'platform-doc-1',
+        id: 'cyberark',
         image: CyberArk,
         title: 'Securing Privileged Access with CyberArk Solutions',
         description:
@@ -217,7 +217,7 @@ const platformDocuments = [
         ),
     },
     {
-        id: 'platform-doc-2',
+        id: 'delinea',
         image: Delinea,
         title: 'Simplifying Privileged Access with Delinea (Formerly Thycotic)',
         description:
@@ -333,7 +333,7 @@ const platformDocuments = [
         ),
     },
     {
-        id: 'platform-doc-3',
+        id: 'gigya',
         image: Gigya,
         title: 'Enhancing Customer Experience with SAP Customer Data Cloud (Gigya)',
         description:
@@ -493,7 +493,7 @@ const platformDocuments = [
         )
     },
     {
-        id: 'platform-doc-4',
+        id: 'microsoft',
         image: Microsoft,
         title: 'Modernizing Enterprise Identity with Microsoft Solutions',
         description:
@@ -660,7 +660,7 @@ const platformDocuments = [
         )
     },
     {
-        id: 'platform-doc-5',
+        id: 'okta',
         image: Okta,
         title: 'Empowering Organizations with Okta Identity Solutions',
         description:
@@ -874,7 +874,7 @@ const platformDocuments = [
         ),
     },
     {
-        id: 'platform-doc-6',
+        id: 'omada',
         image: Omada,
         title: 'Driving Digital Transformation with Omada Solutions',
         description:
@@ -1037,7 +1037,7 @@ const platformDocuments = [
         )
     },  
     {
-        id: 'platform-doc-7',
+        id: 'ping',
         image: Ping,
         title: 'Unlocking Identity Potential with Ping Identity & ForgeRock Solutions',
         description: 'Ping Identity and ForgeRock offer powerful identity and access management solutions for enterprises seeking secure, scalable, and seamless identity experiences. At RAAH Technologies, we bring the expertise required to implement and optimize these platforms to solve identity challenges for workforce, customer, and partner ecosystems.',
@@ -1275,7 +1275,7 @@ const platformDocuments = [
         )
     },
     {
-        id: 'platform-doc-8',
+        id: 'radiant-logic',
         image: RadiantLogic,
         title: 'Unifying Identity Silos with Radiant Logic Solutions',
         description:
@@ -1439,7 +1439,7 @@ const platformDocuments = [
         )
     },
     {
-        id: 'platform-doc-9',
+        id: 'saviynt',
         image: Saviynt,
         title: 'Saviynt: Enabling Intelligent Identity Governance and Administration',
         description:
@@ -1521,7 +1521,7 @@ const platformDocuments = [
         )
     },  
     {
-        id: 'platform-doc-10',
+        id: 'servicenow',
         image: ServiceNow,
         title: 'Streamlining IT Service Management with ServiceNow Solutions',
         description:
@@ -1679,7 +1679,7 @@ const platformDocuments = [
         )
     },
     {
-        id: 'platform-doc-11',
+        id: 'wso2',
         image: WS02,
         title: 'Delivering API and Identity Management with WSO2 Solutions',
         description:
