@@ -45,8 +45,8 @@ function App() {
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
 
         {/* Catch-all: redirect to home */}
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
+        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
 
       </Routes>
       <Footer />
