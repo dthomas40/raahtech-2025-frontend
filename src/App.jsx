@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import Header from './components/Header';
@@ -44,8 +44,10 @@ function App() {
         <Route path='/terms-and-conditions' element={<TermsAndConditionsPage />} />
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
 
-        {/* Catch-all 404 */}
-        <Route path="*" element={<NotFoundPage />} />
+        {/* Catch-all: redirect to home */}
+        {/* <Route path="*" element={<NotFoundPage />} /> */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+
       </Routes>
       <Footer />
     </Router>
